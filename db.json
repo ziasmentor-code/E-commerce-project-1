@@ -1,0 +1,345 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Navy Blue Denim Maxi Shirt Dress",
+      "category": "Women",
+      "price": 2999,
+      "image": "https://www.femmella.com/cdn/shop/files/25-8-2512002_750x.jpg?v=1760332665",
+      "description": "A timeless denim dress designed for effortless style and comfort. Crafted from soft, breathable denim, this piece is perfect for everyday wear — dress it up with heels or keep it casual with sneakers."
+    },
+    {
+      "id": "2",
+      "name": " Kids White Knitted Bodycon Dress",
+      "category": "Kid",
+      "price": 999,
+      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026279001-Enhanced-1.jpg?v=1762853162&width=1946",
+      "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit."
+    },
+      {
+      "id": "3",
+      "name": "women solid long sleeve faux fur jacket",
+      "category": "Women",
+      "price": 1600,
+      "image": "https://img0.junaroad.com/uiproducts/22086224/zoom_0-1758026303.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+      {
+         "id": "4",
+      "name": "Printed Polyester Square Neck Women's Dress",
+      "category": "Women",
+      "price": 1600,
+      "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+         "id": "5",
+      "name": "Floral Cotton Round Neck Womens Kurta Pant Set",
+      "category": "Women",
+      "price": 2000,
+      "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/SS23GH2823PCAM/SS23GH2823PCAM_BLUE/SS23GH2823PCAM_BLUE.jpg_2000Wx3000H",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+        {
+         "id": "6",
+      "name": "Kids Pink Knitted Bodycon Dress",
+      "category": "Women",
+      "price": 999,
+      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026280001-Enhanced-1.jpg?v=1762853269&width=1946",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     
+        {
+         "id": "7",
+      "name": "black cotton blend coord set",
+      "category": "men",
+      "price": 2000,
+      "image": "https://img1.junaroad.com/uiproducts/21143649/zoom_1-1713865706.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+      {
+         "id": "8",
+      "name": "black cotton blend coord set",
+      "category": "Women",
+      "price": 2000,
+      "image": "https://img0.junaroad.com/uiproducts/19117950/zoom_0-1687938205.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+         "id": "9",
+      "name": "blue cotton asymmetric kurta",
+      "category": "men",
+      "price": 1255,
+      "image": "https://img0.junaroad.com/uiproducts/15277359/zoom_0-1530614961.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "10",
+      "name": "Kids Brown Colour-Blocked Cotton Polo Sweater",
+      "category": "kid",
+      "price": 999,
+      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025537001-Upscaled-1_1.jpg?v=1762846450&width=1946",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+         "id": "10",
+      "name": "lavender faux fur jacket",
+      "category": "Women",
+      "price": 2179,
+      "image": "https://img2.junaroad.com/uiproducts/20917147/zoom_0-1707297404.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+         "id": "11",
+      "name": "women solid long sleevees regular jacket",
+      "category": "Women",
+      "price": 2189,
+      "image": "https://img2.junaroad.com/uiproducts/21748765/pri_175_p-1740793703.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+      {
+         "id": "12",
+      "name": "white cotton regular shirt",
+      "category": "Women",
+      "price": 2189,
+      "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+        {
+         "id": "13",
+      "name": "purple cotton crop top",
+      "category": "Women",
+      "price": 499,
+      "image": "https://img0.junaroad.com/uiproducts/20570622/zoom_0-1701870795.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "14",
+      "name": "women solid long sleeves straight top",
+      "category": "Women",
+      "price": 599,
+      "image": "https://img2.junaroad.com/uiproducts/21666382/pri_175_p-1733328210.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "15",
+      "name": "grey cotton blend top and palazzos set coord",
+      "category": "Women",
+      "price": 739,
+      "image": "https://img0.junaroad.com/uiproducts/19595614/zoom_0-1679639786.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+      {
+         "id": "16",
+      "name": "shirt collar printed bottom set",
+      "category": "Women",
+      "price": 1159,
+      "image": "https://img1.junaroad.com/uiproducts/18720841/zoom_1-1669782339.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "17",
+      "name": "men white solids collared neck casual shirt",
+      "category": "men",
+      "price": 609,
+      "image": "https://img0.junaroad.com/uiproducts/20767951/zoom_0-1717506448.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "18",
+      "name": "navy blue cotton t-shirt",
+      "category": "men",
+      "price": 999,
+      "image": "https://img0.junaroad.com/uiproducts/15614795/zoom_0-1709818465.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+         {
+         "id": "19",
+      "name": "women solid long sleeve fur detailed jacket",
+      "category": "Women",
+      "price": 999,
+      "image": "https://img2.junaroad.com/uiproducts/22058739/pri_175_p-1759830169.jpg",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+         "id": "20",
+      "name": "Y&F Kids Black and White Fleece Jacket",
+      "category": "Kid",
+      "price": 999,
+      "image": "https://www.westside.com/cdn/shop/files/301026284BLACK_1.jpg?v=1763025932&width=493",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+      "id": "21",
+      "name": "Flared High Jeans",
+      "category": "Women",
+      "price": 1600,
+      "image": "https://www.westside.com/cdn/shop/files/301031105GREY_1.jpg?v=1756218022&width=1946",
+      "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit."
+    },
+     {
+         "id": "22",
+      "name": "Floral Full Length Cotton Woven Womens Skirt Kurta Dupatta Set",
+      "category": "Women",
+      "price": 2000,
+      "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/SS23GH2832PCAM/SS23GH2832PCAM_BLUE/SS23GH2832PCAM_BLUE.jpg_2000Wx3000H",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+        "id": "23",
+      "name": "Baby Beige Fleece Detailed Sweater",
+      "category": "kid",
+      "price": 2000,
+      "image": "https://www.westside.com/cdn/shop/files/301027893OATMEAL.jpg?v=1758178708&width=493",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    
+   {
+        "id": "24",
+      "name": "Green Schiffli Embroidered Cotton Blouse",
+      "category": "Women",
+      "price": 1499,
+      "image": "https://www.westside.com/cdn/shop/files/301043576TEAL_1.jpg?v=1763042958&width=493",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+        "id": "24",
+      "name": "Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set",
+      "category": "kid",
+      "price": 1499,
+      "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/WS-HOP-Baby-Girls-Face-Enhanced-20_800x.jpg?v=1762437514",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+     {
+        "id": "25",
+      "name": "Black Denim A-Line Dress",
+      "category": "Women",
+      "price": 2199,
+      "image": "https://www.westside.com/cdn/shop/files/301043211BLACK_1.jpg?v=1763042960&width=493",
+      "description": "Discover effortless charm with this elegant denim midi dress — made from soft, breathable cotton blend denim for all-day comfort. The structured bodice features subtle stitching details, and the midi length gives it a classic, sophisticated silhouette. It’s versatile enough to be dressed up with heels or kept casual with sneakers."
+    },
+    {
+      "id":"26",
+      "name":"Olive Textured Relaxed-Fit Cotton Jacket",
+      "category":"men",
+      "price":1999,
+      "image":"https://www.westside.com/cdn/shop/files/301038329DKOLIVE_2.jpg?v=1763017450&width=493",
+      "description":"Discover effortless charm with this elegant denim midi dress — made from soft"
+    },
+    {
+      "id":"27",
+      "name":"Olive Textured Relaxed-Fit Cotton Jacket",
+      "category":"men",
+      "price":1999,
+      "image":"https://www.westside.com/cdn/shop/files/301038329DKOLIVE_2.jpg?v=1763017450&width=493",
+      "description":"Discover effortless charm with this elegant denim midi dress — made from soft"
+    },
+     {
+      "id":"28",
+      "name":"Studiofit Black Striped Relaxed-Fit Mid-Rise Track Pants",
+      "category":"men",
+      "price":1999,
+      "image":"https://www.westside.com/cdn/shop/files/301037964BLACK_1.jpg?v=1763377681&width=1946",
+      "description":"Discover effortless charm with this elegant denim midi dress — made from soft"
+    },
+     {
+      "id":"29",
+      "name":"Wardrobe Off-White Solid Jacket",
+      "category":"Women",
+      "price":1999,
+      "image":"https://www.westside.com/cdn/shop/files/301031073IVORY_2.jpg?v=1763042959&width=1946",
+      "description":"Discover effortless charm with this elegant denim midi dress — made from soft"
+    },
+     {
+      "id":"30",
+      "name":"Baby Beige Crochet-Detailed Cotton Shirt with Shorts Set",
+      "category":"kid",
+      "price":1999,
+      "image":"https://www.westside.com/cdn/shop/files/301027086OFFWHITE.jpg?v=1758178205&width=493",
+      "description":"Discover effortless charm with this elegant denim midi dress — made from soft"
+    }
+    
+
+
+    
+    
+    
+    
+    
+
+
+
+
+    
+    
+    
+  ],
+
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "8519",
+      "name": "aleema",
+      "email": "aleema@gmail.com",
+      "password": "aleema123",
+      "role": "user"
+    },
+    {
+      "id": "27d4",
+      "name": "sulthana",
+      "email": "sulthana@gmail.com",
+      "password": "aleema12",
+      "role": "user"
+    },
+    {
+      "id": "a6c7",
+      "name": "muneesa",
+      "email": "muneesa@gmail.com",
+      "password": "noushad",
+      "role": "user"
+    },
+    {
+      "id": "975b",
+      "name": "ishaaa",
+      "email": "isha@gmail.com",
+      "password": "vbnmcxz",
+      "role": "user"
+    },
+    {
+      "id": "8f4a",
+      "name": "zay",
+      "email": "zay@gmail.com",
+      "password": "vbnmcxz",
+      "role": "user"
+    },
+    {
+      "id": "6c99",
+      "name": "udaifa",
+      "email": "udaifa@gmail.com",
+      "password": "vbnmcxz",
+      "role": "user"
+    },
+    {
+      "id": "85fc",
+      "name": "zayan",
+      "email": "zayan@gmail.com",
+      "password": "qwertyu",
+      "role": "user"
+    },
+    {
+      "id": "cd4c",
+      "name": "gello",
+      "email": "hello@gmail.com",
+      "password": "asdfghjkl",
+      "role": "user"
+    }
+  ],
+
+  "orders": []
+}
