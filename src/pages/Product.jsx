@@ -1,48 +1,48 @@
-import React, { useState, useEffect, useContext } from "react";
-import API from "../services/api";
-import { CartContext } from "../Context/CartContext";
-import { useNavigate } from "react-router-dom";
+
+
+import React, { useState, useEffect } from "react";
+import API from "../api/Api";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useContext(CartContext);  
-  const navigate=useNavigate();
 
   useEffect(() => {
     API.get("/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        console.log("📌 PRODUCT DATA FROM API:", res.data);
+        setProducts(res.data);
+      })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-      {products.map((item) => (
-        <div
-          key={item.id}
-          className="shadow-md p-4 rounded-lg flex flex-col items-center"
-        >
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-80 h-115 object-cover rounded-md"
-          />
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">All Products</h1>
 
-          <h2 className="text-lg font-semibold text-center mt-2">
-            {item.name}
-          </h2>
-
-          <p className="text-md text-gray-800 mt-1">₹{item.price}</p>
-
-          <button
-            onClick={() => {addToCart(item);
-              navigate("/cart");
-            }}
-            className="mt-2 bg-black text-white px-3 py-1 rounded"
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {products.map((p) => (
+          <div
+            key={p.id}
+            className="border p-3 rounded-lg shadow hover:scale-105 transition-transform duration-300"
           >
-            Add to cart
-          </button>
-        </div>
-      ))}
+           
+            <img
+              src={p.image} 
+              alt={p.name}
+              className="w-full h-150 object-cover rounded-lg mb-3 bg-gray-100"
+            />
+
+            
+            <h2 className="text-lg font-semibold">{p.name}</h2>
+
+ 
+            <p className="text-gray-700 font-medium mt-1">₹{p.price}</p>
+
+         
+            <p className="text-gray-500 text-sm mt-2 line-clamp-3">{p.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

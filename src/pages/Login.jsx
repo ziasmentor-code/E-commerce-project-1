@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -7,7 +8,8 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => 
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,16 +19,17 @@ export default function Login() {
       const { email, password } = form;
 
       if (!email || !password) {
-        alert("Please fill both fields!");
+        toast.error("Please fill both fields!");
         setLoading(false);
         return;
       }
 
-      const res = await fetch(`http://localhost:5002/users?email=${email}`);
+      // 🔥 Correct port updated (5010)
+      const res = await fetch(`http://localhost:5001/users?email=${email}`);
       const users = await res.json();
 
       if (users.length === 0) {
-        alert("No account found. Please register first!");
+        toast.error("No account found. Please register first!");
         setLoading(false);
         return;
       }
@@ -34,26 +37,30 @@ export default function Login() {
       const user = users[0];
 
       if (user.password !== password) {
-        alert("Incorrect password. Try again!");
+        toast.error("Incorrect password. Try again!");
         setLoading(false);
         return;
       }
 
-      localStorage.setItem("user", JSON.stringify(user));
-      alert(`Welcome back, ${user.name}!`);
-      navigate("/product");
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      toast.success(`Welcome back, ${user.name}!`);
+
+      // 🔥 Correct redirect URL
+      navigate("/products");
+
     } catch (err) {
       console.error("Login failed:", err);
-      alert("Something went wrong. Try later.");
+      toast.error("Something went wrong. Try later.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-[90%] sm:w-[400px]">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             name="email"
@@ -64,6 +71,7 @@ export default function Login() {
             onChange={handleChange}
             required
           />
+
           <div className="relative">
             <input
               name="password"
@@ -82,6 +90,7 @@ export default function Login() {
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
+
           <button
             type="submit"
             disabled={loading}
@@ -90,12 +99,10 @@ export default function Login() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+
         <p className="text-center text-gray-600 mt-4">
           Don't have an account?{" "}
-          <Link
-            to="/register"
-            className="text-black font-semibold hover:underline"
-          >
+          <Link to="/register" className="text-black font-semibold hover:underline">
             Register
           </Link>
         </p>

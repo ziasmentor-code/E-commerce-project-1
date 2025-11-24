@@ -1,102 +1,65 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
-import { useNavigate } from "react-router-dom";
-
 
 export default function Cart() {
-  const { cartItems, setCartItems } = useContext(CartContext);
-  const navigate = useNavigate();
+  const { cart, removeFromCart, increaseQty, decreaseQty } =
+    useContext(CartContext);
 
-  const increaseQty = (id) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
-    );
-  };
-
-  const decreaseQty = (id) => {
-    setCartItems((prev) =>
-      prev
-        .map((item) =>
-          item.id === id && item.quantity > 1
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        )
-        .filter((item) => item.quantity > 0)
-    );
-  };
-
-  const removeItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
 
-      {cartItems.length === 0 ? (
-        <p className="text-gray-500 text-lg">Your cart is empty.</p>
+      {cart.length === 0 ? (
+        <p className="text-gray-600">Your cart is empty</p>
       ) : (
-        <div className="space-y-4">
-          {cartItems.map((item) => (
-            <div
-              key={item.id}
-              className="flex items-center justify-between border p-3 rounded-lg"
-            >
-              <div className="flex items-center gap-4">
-                <img
-                  src={item.image}
-                  className="w-20 h-20 object-cover rounded"
-                  alt=""
-                />
-                <div>
-                  <h3 className="font-semibold">{item.name}</h3>
-                  <p className="text-gray-700">${item.price}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={() => decreaseQty(item.id)}
-                  className="px-3 py-1 bg-gray-200 rounded"
-                >
-                  -
-                </button>
-
-                <span>{item.quantity}</span>
-
-                <button
-                  onClick={() => increaseQty(item.id)}
-                  className="px-3 py-1 bg-gray-200 rounded"
-                >
-                  +
-                </button>
-
-                <button
-                  onClick={() => removeItem(item.id)}
-                  className="ml-4 text-red-500"
-                >
-                  Remove
-                </button>
+        cart.map((item) => (
+          <div
+            key={item._id}
+            className="flex items-center justify-between p-4 border-b"
+          >
+            <div className="flex items-center gap-4">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-20 h-20 object-cover rounded"
+              />
+              <div>
+                <h2 className="font-semibold">{item.name}</h2>
+                <p>₹{item.price}</p>
               </div>
             </div>
-          ))}
 
-          <div className="text-xl font-semibold mt-4">
-            Total: ₹{total.toFixed(2)}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => decreaseQty(item._id)}
+                className="px-3 py-1 border rounded"
+              >
+                -
+              </button>
+              <span>{item.qty}</span>
+              <button
+                onClick={() => increaseQty(item._id)}
+                className="px-3 py-1 border rounded"
+              >
+                +
+              </button>
+            </div>
 
+            <button
+              onClick={() => removeFromCart(item._id)}
+              className="text-red-500 font-semibold"
+            >
+              Remove
+            </button>
           </div>
-          <button 
-          onClick={()=> navigate("/checkout")}
-          className="bg-black text-white px-4 py-2 rounded mt-4">
-            Proceed to Checkout
-          </button>
+        ))
+      )}
+
+      {cart.length > 0 && (
+        <div className="mt-6 text-xl font-bold">
+          Total: ₹{total}
         </div>
       )}
     </div>

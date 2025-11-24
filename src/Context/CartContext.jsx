@@ -1,71 +1,31 @@
-
-
-
-// import { createContext, useEffect, useState } from "react";
-
-// export const CartContext = createContext();
-
-// export const CartProvider=({ children })=> {
-//   const [cartItems, setCartItems] = useState([]);
-
-//   useEffect(()=>{
-//     const storedCart=JSON.parse(localStorage.getItem("cart"))|| [];
-//     setCartItems(storedCart);
-//   }, []);
-
-//   useEffect(()=>{
-//     local
-//   })
-
-//   const addToCart = (product) => {
-//     setCart([...cart, product]);
-//   };
-
-//   return (
-//     <CartContext.Provider value={{ cart, addToCart }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// }
-
-
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem("cart");
+    return saved ? JSON.parse(saved) : [];
+  });
 
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(storedCart);
-  }, []);
-
-
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
-
+    localStorage.setItem("cart", JSON.stringify(items));
+  }, [items]);
 
   const addToCart = (product) => {
-    const exists = cartItems.find((item) => item.id === product.id);
+    setItems((prev) => [...prev, product]);
+  };
 
-    if (exists) {
+  const clearCart = () => {
+    setItems([]);
+  };
 
-      const updated = cartItems.map((item) =>
-        item.id === product.id
-          ? { ...item, quantity: (item.quantity || 1) + 1 }
-          : item
-      );
-      setCartItems(updated);
-    } else {
-
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
+  const removeFromCart = (id, size) => {
+    setItems((prev) => prev.filter((item) => item.id !== id || item.size !== size));
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, setCartItems, addToCart }}>
+    <CartContext.Provider value={{ items, addToCart, clearCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
