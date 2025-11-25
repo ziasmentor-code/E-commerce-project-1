@@ -1,67 +1,277 @@
-import React, { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
+// import { useEffect } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { increaseQty, decreaseQty, removeFromCart } from "../redux/CartSlice";
+// import { useNavigate } from "react-router-dom";
+// import toast from "react-hot-toast";
 
-export default function Cart() {
-  const { cart, removeFromCart, increaseQty, decreaseQty } =
-    useContext(CartContext);
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+// const Cart = () => {
+//   const cart = useSelector((state) => state.cart?.items || []);
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
+
+//   const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+//   useEffect(() => {
+//     if (!user) {
+//       toast.error("Please login first to view your cart!");
+//       navigate("/login");
+//     }
+//   }, [user, navigate]);
+
+//   if (!user) return <p className="text-center mt-10">Redirecting to login...</p>;
+
+//   const total = cart.reduce(
+//     (sum, item) => sum + (item.price || 0) * (item.quantity || 1),
+//     0
+//   );
+
+//   const handleIncrease = (item) => {
+//     dispatch(increaseQty({ id: item.id, size: item.size }));
+//   };
+
+//   const handleDecrease = (item) => {
+//     if (item.quantity > 1) {
+//       dispatch(decreaseQty({ id: item.id, size: item.size }));
+//     }
+//   };
+
+//   const handleRemove = (item) => {
+//     dispatch(removeFromCart({ id: item.id, size: item.size }));
+//   };
+
+//   const handleCheckout = () => {
+//     if (cart.length === 0) {
+//       toast.error("Your cart is empty!");
+//       return;
+//     }
+
+//     // Updated address check
+//     const addr = user.address || {};
+
+//     if (!addr.street || !addr.city || !addr.state || !addr.zip) {
+//       toast.error("Please complete your address in your profile before checkout!");
+//       navigate("/profile");
+//       return;
+//     }
+
+//     navigate("/checkout");
+//   };
+
+//   return (
+//     <div className="p-8">
+//       <h1 className="text-2xl font-bold mb-6 mt-14">🛒 Your Cart</h1>
+
+//       {cart.length === 0 ? (
+//         <div className="text-center mt-10 text-gray-600">
+//           <p className="text-lg">No items in your cart.</p>
+//           <button
+//             onClick={() => navigate("/products")}
+//             className="mt-4 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
+//           >
+//             Browse products
+//           </button>
+//         </div>
+//       ) : (
+//         <div className="space-y-6">
+//           {cart.map((item) => (
+//             <div
+//               key={item.id}
+//               className="flex justify-between items-center border-b pb-3"
+//             >
+//               <div className="flex items-center gap-4">
+//                 <img
+//                   src={item.image}
+//                   alt={item.name}
+//                   className="w-20 h-20 object-cover rounded"
+//                 />
+//                 <div>
+//                   <h2 className="font-semibold">{item.name}</h2>
+//                   <p className="text-gray-600">₹{item.price}</p>
+//                 </div>
+//               </div>
+
+//               <div className="flex items-center gap-4">
+//                 <button
+//                   onClick={() => handleDecrease(item)}
+//                   className="cursor-pointer px-2 py-1 border rounded hover:bg-gray-100"
+//                 >
+//                   -
+//                 </button>
+//                 <span>{item.quantity}</span>
+//                 <button
+//                   onClick={() => handleIncrease(item)}
+//                   className="cursor-pointer px-2 py-1 border rounded hover:bg-gray-100"
+//                 >
+//                   +
+//                 </button>
+//                 <button
+//                   onClick={() => handleRemove(item)}
+//                   className="text-red-600 cursor-pointer"
+//                 >
+//                   Remove
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+
+//           <h2 className="text-right text-2xl font-bold mt-6">
+//             Total: ₹{total.toFixed(2)}
+//           </h2>
+
+//           <div className="text-right mt-6">
+//             <button
+//               onClick={handleCheckout}
+//               className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition cursor-pointer"
+//             >
+//               Checkout
+//             </button>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Cart;
+
+
+
+
+
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { increaseQty, decreaseQty, removeFromCart } from "../redux/CartSlice";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
+const Cart = () => {
+  const cart = useSelector((state) => state.cart?.items || []);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  useEffect(() => {
+    if (!user) {
+      toast.error("Please login first to view your cart!");
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
+  if (!user) return <p className="text-center mt-10">Redirecting to login...</p>;
+
+  const total = cart.reduce(
+    (sum, item) => sum + (item.price || 0) * (item.qty || 1),
+    0
+  );
+
+  const handleIncrease = (item) => {
+    dispatch(increaseQty(item.id));
+  };
+
+  const handleDecrease = (item) => {
+    if (item.qty > 1) {
+      dispatch(decreaseQty(item.id));
+    }
+  };
+
+  const handleRemove = (item) => {
+    dispatch(removeFromCart(item.id));
+  };
+
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    const addr = user.address || {};
+
+    if (!addr.street || !addr.city || !addr.state || !addr.zip) {
+      toast.error("Please complete your address in your profile before checkout!");
+      navigate("/profile");
+      return;
+    }
+
+    navigate("/checkout");
+  };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
+    <div className="p-8">
+      <h1 className="text-2xl font-bold mb-6 mt-14">🛒 Your Cart</h1>
 
       {cart.length === 0 ? (
-        <p className="text-gray-600">Your cart is empty</p>
-      ) : (
-        cart.map((item) => (
-          <div
-            key={item._id}
-            className="flex items-center justify-between p-4 border-b"
+        <div className="text-center mt-10 text-gray-600">
+          <p className="text-lg">No items in your cart.</p>
+          <button
+            onClick={() => navigate("/products")}
+            className="mt-4 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
           >
-            <div className="flex items-center gap-4">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-20 h-20 object-cover rounded"
-              />
-              <div>
-                <h2 className="font-semibold">{item.name}</h2>
-                <p>₹{item.price}</p>
+            Browse products
+          </button>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {cart.map((item) => (
+            <div
+              key={item.id}
+              className="flex justify-between items-center border-b pb-3"
+            >
+              <div className="flex items-center gap-4">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-20 h-20 object-cover rounded"
+                />
+                <div>
+                  <h2 className="font-semibold">{item.name}</h2>
+                  <p className="text-gray-600">₹{item.price}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => handleDecrease(item)}
+                  className="cursor-pointer px-2 py-1 border rounded hover:bg-gray-100"
+                >
+                  -
+                </button>
+                <span>{item.qty}</span>
+                <button
+                  onClick={() => handleIncrease(item)}
+                  className="cursor-pointer px-2 py-1 border rounded hover:bg-gray-100"
+                >
+                  +
+                </button>
+
+                <button
+                  onClick={() => handleRemove(item)}
+                  className="text-red-600 cursor-pointer"
+                >
+                  Remove
+                </button>
               </div>
             </div>
+          ))}
 
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => decreaseQty(item._id)}
-                className="px-3 py-1 border rounded"
-              >
-                -
-              </button>
-              <span>{item.qty}</span>
-              <button
-                onClick={() => increaseQty(item._id)}
-                className="px-3 py-1 border rounded"
-              >
-                +
-              </button>
-            </div>
+          <h2 className="text-right text-2xl font-bold mt-6">
+            Total: ₹{total.toFixed(2)}
+          </h2>
 
+          <div className="text-right mt-6">
             <button
-              onClick={() => removeFromCart(item._id)}
-              className="text-red-500 font-semibold"
+              onClick={handleCheckout}
+              className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition cursor-pointer"
             >
-              Remove
+              Checkout
             </button>
           </div>
-        ))
-      )}
-
-      {cart.length > 0 && (
-        <div className="mt-6 text-xl font-bold">
-          Total: ₹{total}
         </div>
       )}
     </div>
   );
-}
+};
+
+export default Cart;
