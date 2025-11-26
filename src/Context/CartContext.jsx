@@ -48,6 +48,26 @@
 //   );
 // };
 
+// import React, { createContext, useState } from "react";
+
+// export const CartContext = createContext();
+
+// export const CartProvider = ({ children }) => {
+//   const [items, setItems] = useState([]);
+
+//   const addToCart = (product) => setItems((prev) => [...prev, product]);
+//   const removeFromCart = (id, size) =>
+//     setItems((prev) => prev.filter((item) => !(item.id === id && item.size === size)));
+//   const clearCart = () => setItems([]);
+
+//   return (
+//     <CartContext.Provider value={{ items, addToCart, removeFromCart, clearCart }}>
+//       {children}
+//     </CartContext.Provider>
+//   );
+// };
+
+
 import React, { createContext, useState } from "react";
 
 export const CartContext = createContext();
@@ -55,9 +75,15 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
 
-  const addToCart = (product) => setItems((prev) => [...prev, product]);
+  const addToCart = (product) => {
+    const exists = items.find(p => p.id === product.id && p.size === product.size);
+    if (exists) return;
+    setItems(prev => [...prev, product]);
+  };
+
   const removeFromCart = (id, size) =>
-    setItems((prev) => prev.filter((item) => !(item.id === id && item.size === size)));
+    setItems(prev => prev.filter(item => !(item.id === id && item.size === size)));
+
   const clearCart = () => setItems([]);
 
   return (

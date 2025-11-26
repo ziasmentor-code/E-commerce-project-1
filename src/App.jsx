@@ -16,6 +16,13 @@ import { CartProvider } from "./Context/CartContext";
 import { WishlistProvider } from "./Context/WishlistContext";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/Ordersuccess";
+import Wishlist from "./pages/Wishlist";
+import Order from "./pages/Order";
+import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
+import AddProduct from "./pages/AddProduct";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import AdminDashboard from "./pages/AdminDashboard";
 
 
 
@@ -27,6 +34,18 @@ export default function App() {
           <Navbar />
 
           <Routes>
+            <Route path="/profile" element={
+              <ProtectedRoutes>
+                <Profile/>
+              </ProtectedRoutes>
+            }
+            />
+            <Route path="/admin" element={
+              <ProtectedRoutes>
+                <AdminDashboard />
+              </ProtectedRoutes>
+            }
+            />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -36,11 +55,17 @@ export default function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/success" element={<OrderSuccess />}/>
+            <Route path="/wishlist" element={<Wishlist />}/>
+            <Route path="/order" element={<Order />}/>
+           
+            <Route path="/admin/add-product" element={<AddProduct />}/>
+          
  
+
 
           </Routes>
 
-          <Footer />
+  
         </WishlistProvider>
       </CartProvider>
     </Router>
