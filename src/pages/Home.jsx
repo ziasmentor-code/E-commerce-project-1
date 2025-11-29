@@ -34,7 +34,7 @@ export default function Home() {
     { 
       id: 1, 
       name: "Drop", 
-      image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=500&h=600&fit=crop",
+      image: "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301040917BLACK_1_800x.jpg?v=1763138424",
       description: "Latest Collection"
     },
     { 
@@ -57,9 +57,9 @@ export default function Home() {
     },
     { 
       id: 5, 
-      name: "Jeans", 
-      image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=600&fit=crop",
-      description: "Denim Essentials"
+      name: " Baggy Jeans", 
+      image: "https://pictures.kartmax.in/live/sites/aPfvUDpPwMn1ZadNKhP7/theme/Widgets-Home-PageBaggy-Jeans-d9153d6d-a0f4-439c-9935-01845a90b6c2.jpg",
+      description: "Baggy Jeans Essentials"
     },
     { 
       id: 6, 
@@ -97,8 +97,13 @@ export default function Home() {
 
         {/* Secondary Hero Image (moves slower for depth) */}
         <img
-          src="https://media.istockphoto.com/id/1287916086/photo/happy-model-holding-hands-on-thighs-in-a-fashion-pose.jpg?s=2048x2048&w=is&k=20&c=ExO9LmOp4hR_yUnqDfkNPAmSvbD35j3FzFHxWGdLkYY="
-          alt="fashion store alternate"
+          src="https://www.westside.com/cdn/shop/files/Kids-Web_b62c3641-5114-4112-9d13-36432c22264d.jpg?v=1763708515"
+          className="absolute w-full h-full object-cover opacity-70 mix-blend-multiply will-change-transform"
+          style={{ transform: `translateY(${offsetY * speedSecondary}px)` }}
+        />
+         <img
+          src="https://www.westside.com/cdn/shop/files/WSC-WEB-NEW_1.jpg?v=1763358714"
+          
           className="absolute w-full h-full object-cover opacity-70 mix-blend-multiply will-change-transform"
           style={{ transform: `translateY(${offsetY * speedSecondary}px)` }}
         />
