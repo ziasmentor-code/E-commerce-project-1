@@ -11,7 +11,7 @@
     {
       "id": "2",
       "name": " Kids White Knitted Bodycon Dress",
-      "category": "Kid",
+      "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026279001-Enhanced-1.jpg?v=1762853162&width=1946",
       "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit."
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "name": "Kids Pink Knitted Bodycon Dress",
-      "category": "Kid",
+      "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026280001-Enhanced-1.jpg?v=1762853269&width=1946",
       "description": "A comfortable Kids Pink Knitted Bodycon Dress designed with a soft stretch knit fabric for a secure and easy fit."
@@ -75,7 +75,7 @@
     {
       "id": "10",
       "name": "Kids Brown Colour-Blocked Cotton Polo Sweater",
-      "category": "Kid",
+      "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025537001-Upscaled-1_1.jpg?v=1762846450&width=1946",
       "description": "The chic colour-blocked design adds a fun, modern touch, and the classic polo collar brings a smart, polished look. Perfect for outings, school days, family gatherings, or casual winter wear."
@@ -155,7 +155,7 @@
     {
       "id": "20",
       "name": "Y&F Kids Black and White Fleece Jacket",
-      "category": "Kid",
+      "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/301026284BLACK_1.jpg?v=1763025932&width=493",
       "description": "A cozy Y&F Kids Black and White Fleece Jacket designed for warmth, comfort, and everyday winter style."
@@ -179,7 +179,7 @@
     {
       "id": "23",
       "name": "Baby Beige Fleece Detailed Sweater",
-      "category": "Kid",
+      "category": "Kids",
       "price": 2000,
       "image": "https://www.westside.com/cdn/shop/files/301027893OATMEAL.jpg?v=1758178708&width=493",
       "description": "A soft and cozy Baby Beige Fleece Detailed Sweater designed for warmth, comfort, and adorable winter style."
@@ -235,7 +235,7 @@
     {
       "id": "30",
       "name": "Baby Beige Crochet-Detailed Cotton Shirt with Shorts Set",
-      "category": "Kid",
+      "category": "Kids",
       "price": 1999,
       "image": "https://www.westside.com/cdn/shop/files/301027086OFFWHITE.jpg?v=1758178205&width=493",
       "description": "Dress your little one in adorable comfort with this Baby Beige Crochet-Detailed Cotton Shirt and Shorts Set. Made from soft, breathable cotton, this outfit ensures all-day ease for active toddlers while keeping them looking stylish."
@@ -251,7 +251,7 @@
     {
       "id": "32",
       "name": "Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set",
-      "category": "Kid",
+      "category": "Kids",
       "price": 1499,
       "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/WS-HOP-Baby-Girls-Face-Enhanced-20_800x.jpg?v=1762437514",
       "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance."
@@ -259,88 +259,18 @@
   ],
   "users": [
     {
-      "id": "1",
+      "id": "10000",
       "name": "Admin",
       "email": "admin@example.com",
       "password": "admin123",
       "role": "admin"
     },
+    
     {
-      "id": "8519",
-      "name": "aleema",
-      "email": "aleema@gmail.com",
-      "password": "aleema123",
-      "role": "user"
-    },
-    {
-      "id": "27d4",
-      "name": "sulthana",
-      "email": "sulthana@gmail.com",
-      "password": "aleema12",
-      "role": "user"
-    },
-    {
-      "id": "a6c7",
-      "name": "muneesa",
-      "email": "muneesa@gmail.com",
-      "password": "noushad",
-      "role": "user"
-    },
-    {
-      "id": "975b",
-      "name": "ishaaa",
-      "email": "isha@gmail.com",
-      "password": "vbnmcxz",
-      "role": "user"
-    },
-    {
-      "id": "8f4a",
-      "name": "zay",
-      "email": "zay@gmail.com",
-      "password": "vbnmcxz",
-      "role": "user"
-    },
-    {
-      "id": "6c99",
-      "name": "udaifa",
-      "email": "udaifa@gmail.com",
-      "password": "vbnmcxz",
-      "role": "user"
-    },
-    {
-      "id": "85fc",
-      "name": "zayan",
-      "email": "zayan@gmail.com",
-      "password": "qwertyu",
-      "role": "user"
-    },
-    {
-      "id": "cd4c",
-      "name": "gello",
-      "email": "hello@gmail.com",
-      "password": "asdfghjkl",
-      "role": "user"
-    },
-    {
-      "id": "cc80",
-      "name": "alee",
-      "email": "aleema123@gmail.com",
-      "password": "hello",
-      "role": "user"
-    },
-    {
-      "id": "f72b",
-      "name": "zayn",
-      "email": "zayn@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "a4fa",
-      "name": "zayan",
-      "email": "z123@gmail.com",
-      "password": "qwertyu",
-      "role": "user"
+      "id": "290b",
+      "name": "dedfe",
+      "email": "admin@gmail.com",
+      "password": "fullstack"
     }
   ],
   "orders": [],

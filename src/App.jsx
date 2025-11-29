@@ -1,73 +1,62 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-
-import Product from "./pages/Product";
-import ProductDetails from "./pages/ProductDetails";
-import Cart from "./pages/Cart";
 
 import { CartProvider } from "./Context/CartContext";
 import { WishlistProvider } from "./Context/WishlistContext";
+
+
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import OrderSuccess from "./pages/Ordersuccess";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Wishlist from "./pages/Wishlist";
-import Order from "./pages/Order";
 import Profile from "./pages/Profile";
-import Admin from "./pages/Admin";
-import AddProduct from "./pages/AddProduct";
-import ProtectedRoutes from "./components/ProtectedRoutes";
-import AdminDashboard from "./pages/AdminDashboard";
 
 
 
-export default function App() {
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Success from "./pages/Success";
+import Orders from "./pages/Orders";
+
+function App() {
   return (
-    <Router>
-      <CartProvider>
-        <WishlistProvider>
+    <CartProvider>
+      <WishlistProvider>  
+        <Router>
           <Navbar />
 
           <Routes>
-            <Route path="/profile" element={
-              <ProtectedRoutes>
-                <Profile/>
-              </ProtectedRoutes>
-            }
-            />
-            <Route path="/admin" element={
-              <ProtectedRoutes>
-                <AdminDashboard />
-              </ProtectedRoutes>
-            }
-            />
+        
             <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+
+           
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+
+           
+            <Route path="/checkout" element={<Checkout />} />
+  
+
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/checkout" element={<Checkout />} />
-
-            <Route path="/products" element={<Product />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/success" element={<OrderSuccess />}/>
-            <Route path="/wishlist" element={<Wishlist />}/>
-            <Route path="/order" element={<Order />}/>
-           
-            <Route path="/admin/add-product" element={<AddProduct />}/>
-          
- 
-
-
+            <Route path="/profile" element={<Profile />} />
+    
+            <Route path="/success" element={<Success />}/>
+            <Route path="/orders" element={<Orders />}/>
           </Routes>
 
-  
-        </WishlistProvider>
-      </CartProvider>
-    </Router>
+        </Router>
+      </WishlistProvider>
+    </CartProvider>
   );
 }
+
+export default App;

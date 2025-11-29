@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -6,6 +10,7 @@ import { Plus, Minus, Heart, Star, ShoppingCart, Truck, Shield, RotateCcw } from
 import { CartContext } from "../Context/CartContext";
 import { WishlistContext } from "../Context/WishlistContext";
 
+// Rating stars component
 const RatingStars = ({ rating }) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
@@ -25,7 +30,6 @@ const RatingStars = ({ rating }) => {
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
   const { items: cart, addToCart, clearCart } = useContext(CartContext);
   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
 
@@ -33,6 +37,7 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const sizes = ["S", "M", "L", "XL", "XXL"];
 
@@ -40,12 +45,13 @@ const ProductDetails = () => {
     window.scrollTo(0, 0);
     const fetchProduct = async () => {
       try {
-        const res = await fetch("http://localhost:5015/products");
+        const res = await fetch(`http://localhost:5001/products/${id}`); // fetch single product by ID
+        if (!res.ok) throw new Error("Failed to fetch product");
         const data = await res.json();
-        const found = data.find((p) => String(p.id) === String(id));
-        setProduct(found || null);
+        setProduct(data);
       } catch (err) {
-        toast.error("Failed to load product");
+        console.error(err);
+        setError("Product not found or failed to load.");
       } finally {
         setLoading(false);
       }
@@ -90,9 +96,9 @@ const ProductDetails = () => {
   };
 
   if (loading) return <p className="text-center mt-10">Loading...</p>;
-  if (!product) return (
+  if (error) return (
     <div className="text-center mt-10">
-      <p className="text-xl">Product Not Found</p>
+      <p className="text-xl text-red-500">{error}</p>
       <button className="px-6 py-2 bg-blue-600 text-white mt-3 rounded" onClick={() => navigate("/")}>
         Go Back
       </button>
@@ -103,6 +109,7 @@ const ProductDetails = () => {
     <div className="bg-white min-h-screen mt-20">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* Product Image */}
           <div className="relative">
             <img src={product.image} alt={product.name} className="w-full h-[850px] object-cover rounded-lg border bg-gray-50"/>
             <button onClick={handleWishlist} className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:shadow-lg transition">
@@ -110,6 +117,7 @@ const ProductDetails = () => {
             </button>
           </div>
 
+          {/* Product Info */}
           <div>
             <h1 className="text-2xl font-bold mb-3">{product.name}</h1>
             <div className="flex items-center gap-2 mb-4">
@@ -125,6 +133,7 @@ const ProductDetails = () => {
               <p className="text-gray-600 text-sm">{product.description}</p>
             </div>
 
+            {/* Sizes */}
             <div className="mb-6">
               <h3 className="text-sm font-semibold mb-2">Select Size</h3>
               <div className="flex gap-2">
@@ -136,6 +145,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
+            {/* Quantity */}
             <div className="mb-6">
               <h3 className="text-sm font-semibold mb-2">Quantity</h3>
               <div className="flex items-center gap-3">
@@ -145,11 +155,13 @@ const ProductDetails = () => {
               </div>
             </div>
 
+            {/* Actions */}
             <div className="flex gap-3 mb-6">
               <button onClick={handleAddToCart} className="flex-1 bg-yellow-500 text-white py-3 rounded font-semibold hover:bg-yellow-600 flex items-center justify-center gap-2"><ShoppingCart size={20}/> Add to Cart</button>
               <button onClick={handleBuyNow} className="flex-1 bg-orange-600 text-white py-3 rounded font-semibold hover:bg-orange-700">Buy Now</button>
             </div>
 
+            {/* Delivery & Security */}
             <div className="border-t pt-6 space-y-3">
               <div className="flex items-center gap-3 text-sm text-gray-700"><Truck size={20} className="text-gray-600"/> <span>Free delivery on orders above ₹500</span></div>
               <div className="flex items-center gap-3 text-sm text-gray-700"><RotateCcw size={20} className="text-gray-600"/> <span>Easy 30-day return and exchange</span></div>
