@@ -1,22 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Navy Blue Denim Maxi Shirt Dress",
-      "category": "Women",
-      "price": 2999,
-      "image": "https://www.femmella.com/cdn/shop/files/25-8-2512002_750x.jpg?v=1760332665",
-      "description": "A timeless denim dress designed for effortless style and comfort. Crafted from soft, breathable denim, this piece is perfect for everyday wear — dress it up with heels or keep it casual with sneakers."
-    },
-    {
-      "id": "2",
-      "name": " Kids White Knitted Bodycon Dress",
-      "category": "Kids",
-      "price": 999,
-      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026279001-Enhanced-1.jpg?v=1762853162&width=1946",
-      "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit."
-    },
-    {
       "id": "3",
       "name": "women solid long sleeve faux fur jacket",
       "category": "Women",
@@ -257,46 +241,46 @@
       "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance."
     },
     {
-       "id": "33",
+      "id": "33",
       "name": "Highlander",
       "category": "Men",
-      "price": 1116, 
+      "price": 1116,
       "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/HLJN004461_4.jpg",
       "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance."
     },
-     {
-       "id": "34",
+    {
+      "id": "34",
       "name": "HOP Kids Brown Ombre Sweater",
       "category": "Kids",
-      "price": 899, 
+      "price": 899,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025730001-Enhanced-1.jpg?v=1762248380&width=493",
       "description": "HOP Kids brings charm to winter dressing with this brown ombre sweater. Detailed with adorable animal motifs, it’s crafted from sumptuous fabric for a warm, cozy feel. Designed with a crew neck and full sleeves, it makes a playful yet comfortable addition to their cold-weather wardrobe."
-     },
-     {
-      "id":"35",
-      "name":"Yellow Floral Printed Ethnic Pants",
-      "category":"Women",
-      "price":"1218",
-      "image":"https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301029622YELLOW_1_800x.jpg?v=1754559742",
-      "description":"These yellow ethnic pants from Diza are adorned with floral motifs for a stylish statement. Made from a breathable fabric, they’re designed for all-day comfort and ease. An elasticated waistband with adjustable drawstrings ensures a flexible fit, while side pockets offer a functional touch."
-     }
-  
-    
+    },
+    {
+      "id": "35",
+      "name": "Yellow Floral Printed Ethnic Pants",
+      "category": "Women",
+      "price": "1218",
+      "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301029622YELLOW_1_800x.jpg?v=1754559742",
+      "description": "These yellow ethnic pants from Diza are adorned with floral motifs for a stylish statement. Made from a breathable fabric, they’re designed for all-day comfort and ease. An elasticated waistband with adjustable drawstrings ensures a flexible fit, while side pockets offer a functional touch."
+    }
   ],
   "users": [
     {
-      "id": "10000",
-      "name": "Admin",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin"
+      "id": "4e25",
+      "name": "aleema",
+      "email": "z123@gmail.com",
+      "password": "aleema@gmail.com"
     },
-    
     {
-      "id": "290b",
-      "name": "dedfe",
+      "id": "1000",
+      "name": "Admin",
+      "role": "admin",
+      "password": "fullstack",
       "email": "admin@gmail.com",
-      "password": "fullstack"
+      "blocked": false,
+      "status": "active",
+      "isAdmin": true
     }
   ],
   "orders": [],

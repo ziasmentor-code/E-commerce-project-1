@@ -1,12 +1,13 @@
 
 
-
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { User } from "lucide-react";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { CartContext } from "../Context/CartContext";
 import { WishlistContext } from "../Context/WishlistContext";
+// import logo from '../assets/logo.png';
+
 
 export default function Navbar() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -14,12 +15,14 @@ export default function Navbar() {
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
+
+
   const { items: cart } = useContext(CartContext);
-  const { wishlist } = useContext(WishlistContext);
+  const { wishlist: wishlistItems } = useContext(WishlistContext);
 
   const cartCount = cart?.length || 0;
-  const wishlistCount = wishlist?.length || 0;
 
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -41,24 +44,25 @@ export default function Navbar() {
     <nav className="flex justify-between items-center px-6 py-4 shadow-md bg-white relative z-50">
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold">
-        I-SHAAAA
+        I-SHAAA
       </Link>
+
 
       {/* Icons */}
       <div className="flex items-center gap-4">
         {/* Wishlist */}
-        <Link to="/wishlist" className="relative">
-          <FaHeart size={22} className="text-red-500" />
-          {wishlistCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
-              {wishlistCount}
+        <Link to="/wishlist" className="relative text-gray-600 hover:text-black">
+          <FaHeart className="w-6 h-6" />
+          {wishlistItems.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-black text-white text-xs px-1 rounded-full">
+              {wishlistItems.length}
             </span>
           )}
         </Link>
 
         {/* Cart */}
         <Link to="/cart" className="relative">
-          <FaShoppingCart size={22} className="text-blue-600" />
+          <FaShoppingCart size={22} className="text-black-100" />
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs px-1 rounded-full">
               {cartCount}
@@ -66,11 +70,11 @@ export default function Navbar() {
           )}
         </Link>
 
-        {/* USER DROPDOWN */}
+        {/* User Dropdown */}
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+            className="p-2 rounded-full bg-gray-200 hover:bg-black-300"
           >
             <User size={26} />
           </button>
@@ -89,9 +93,8 @@ export default function Navbar() {
                     Profile
                   </button>
                   <Link to="/orders" className="text-left px-4 py-2 hover:bg-gray-100">
-                  Orders
+                    Orders
                   </Link>
-
                   <button
                     onClick={handleLogout}
                     className="text-left px-4 py-2 text-red-500 hover:bg-gray-100"
@@ -110,7 +113,6 @@ export default function Navbar() {
                   >
                     Login
                   </button>
-
                   <button
                     onClick={() => {
                       navigate("/register");
@@ -129,7 +131,6 @@ export default function Navbar() {
     </nav>
   );
 }
-
 
 
 // import React, { useState, useEffect, useRef, useContext } from "react";

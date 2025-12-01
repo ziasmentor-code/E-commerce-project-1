@@ -191,7 +191,7 @@ export default function ProductDetails() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://localhost:5001/products/${id}`);
+        const res = await fetch(`http://localhost:5004/products/${id}`);
         const data = await res.json();
         setProduct(data);
       } catch (err) {

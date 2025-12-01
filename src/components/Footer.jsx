@@ -1,20 +1,34 @@
 
 
 import React from "react";
+import { Facebook,Instagram,Twitter,Mail,Phone,MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-gray-200 py-10 mt-12">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="w-full bg-slate-900 text-gray-200 py-10 mt-auto">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
  
         <div>
           <h2 className="text-2xl font-bold text-white mb-4 tracking-wide">I-SHAAAA</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Fashion is not just clothing — it’s confidence.  
+            Fashion is not just clothing —i t’s confidence.  
             Discover timeless elegance crafted for your style.
           </p>
+         <div className="flex space-x-3">
+          <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+           < Facebook size={18}/>
+          </a>
+            <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+              <Instagram size={18}/>
+            </a>
+              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+                <Twitter size={18}/>
+              </a>
+            
+         </div>
         </div>
+
 
       
         <div>

@@ -128,56 +128,86 @@
 //   );
 // };
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
+const API = "http://localhost:5009/cart";
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
 
-  // Add to cart
-  const addToCart = (product) => {
-    setItems((prev) => {
-      const exists = prev.find((item) => item.id === product.id);
-      if (exists) {
-        return prev.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prev, { ...product, quantity: 1 }];
+  // 1️⃣ Load cart from backend
+  useEffect(() => {
+    fetch(API)
+      .then((res) => res.json())
+      .then((data) => setItems(data))
+      .catch((err) => console.error("Error loading cart:", err));
+  }, []);
+
+  // 2️⃣ Add to cart
+  const addToCart = async (product) => {
+    const exists = items.find((item) => item.id === product.id);
+
+    if (exists) {
+      increaseQuantity(product.id);
+      return;
+    }
+
+    const newItem = { ...product, quantity: 1 };
+
+    await fetch(API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newItem),
     });
+
+    setItems((prev) => [...prev, newItem]);
   };
 
-  // Increase quantity
-  const increaseQuantity = (id) => {
+  // 3️⃣ Increase quantity
+  const increaseQuantity = async (id) => {
+    const item = items.find((i) => i.id === id);
+
+    const updatedItem = { ...item, quantity: item.quantity + 1 };
+
+    await fetch(`${API}/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quantity: updatedItem.quantity }),
+    });
+
     setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
+      prev.map((i) => (i.id === id ? updatedItem : i))
     );
   };
 
-  // Decrease quantity
-  const decreaseQuantity = (id) => {
+  // 4️⃣ Decrease quantity
+  const decreaseQuantity = async (id) => {
+    const item = items.find((i) => i.id === id);
+
+    if (!item || item.quantity <= 1) return;
+
+    const updatedItem = { ...item, quantity: item.quantity - 1 };
+
+    await fetch(`${API}/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quantity: updatedItem.quantity }),
+    });
+
     setItems((prev) =>
-      prev
-        .map((item) =>
-          item.id === id
-            ? { ...item, quantity: Math.max(1, item.quantity - 1) }
-            : item
-        )
-        .filter((item) => item.quantity > 0)
+      prev.map((i) => (i.id === id ? updatedItem : i))
     );
   };
 
-  // Remove item from cart
-  const removeFromCart = (id) => {
+  // 5️⃣ Remove from cart
+  const removeFromCart = async (id) => {
+    await fetch(`${API}/${id}`, { method: "DELETE" });
+
     setItems((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Get cart total
+  // 6️⃣ Cart total
   const getCartTotal = () => {
     return items.reduce(
       (total, item) => total + item.price * (item.quantity || 1),
@@ -185,8 +215,11 @@ export function CartProvider({ children }) {
     );
   };
 
-  // CLEAR CART 🔥🔥 (THIS IS REQUIRED FOR PLACE ORDER)
-  const clearCart = () => {
+  // 7️⃣ Clear cart after order
+  const clearCart = async () => {
+    for (let item of items) {
+      await fetch(`${API}/${item.id}`, { method: "DELETE" });
+    }
     setItems([]);
   };
 

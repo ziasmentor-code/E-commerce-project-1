@@ -18,7 +18,7 @@ export default function Product() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/products")   // ✅ Correct API URL
+      .get("http://localhost:5007/products")   // ✅ Correct API URL
       .then((res) => {
         setProducts(res.data);
         setFilteredProducts(res.data);

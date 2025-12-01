@@ -368,7 +368,7 @@ export default function Checkout() {
                       value={shipping.name}
                       onChange={handleChange}
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                     />
                   </div>
                   <div className="group">
@@ -381,7 +381,7 @@ export default function Checkout() {
                       value={shipping.email}
                       onChange={handleChange}
                       placeholder="john@example.com"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                     />
                   </div>
                 </div>
@@ -395,7 +395,7 @@ export default function Checkout() {
                     value={shipping.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                   />
                 </div>
 
@@ -410,7 +410,7 @@ export default function Checkout() {
                     value={shipping.address}
                     onChange={handleChange}
                     placeholder="123 Main Street, Apartment 4B"
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                   />
                 </div>
 
@@ -426,7 +426,7 @@ export default function Checkout() {
                       value={shipping.city}
                       onChange={handleChange}
                       placeholder="Mumbai, Maharashtra"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                     />
                   </div>
                   <div className="group">
@@ -439,7 +439,7 @@ export default function Checkout() {
                       value={shipping.postalCode}
                       onChange={handleChange}
                       placeholder="400001"
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all group-hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-black outline-none transition-all group-hover:border-gray-400"
                     />
                   </div>
                 </div>
