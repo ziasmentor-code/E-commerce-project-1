@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
@@ -15,10 +16,12 @@ export default function Product() {
 
   const [showCategory, setShowCategory] = useState(false);
   const [showSort, setShowSort] = useState(false);
-
+ const location=useLocation();
+ const queryParams=new URLSearchParams(location.search);
+ const urlcategory=queryParams.get("category")
   useEffect(() => {
     axios
-      .get("http://localhost:5007/products")   // ✅ Correct API URL
+      .get("http://localhost:5008/products")   // ✅ Correct API URL
       .then((res) => {
         setProducts(res.data);
         setFilteredProducts(res.data);
@@ -170,15 +173,17 @@ export default function Product() {
     </div>
   );
 }
-
-
-// import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect, useContext } from "react";
 // import { Link } from "react-router-dom";
 // import axios from "axios";
-// import { Search, SlidersHorizontal, ChevronDown, Heart, ShoppingCart, X } from "lucide-react";
-// import toast from "react-hot-toast";
+// import { Search, Filter, SlidersHorizontal, X, ChevronDown, Heart, ShoppingCart } from "lucide-react";
+// import { CartContext } from "../Context/CartContext";
+// import { WishlistContext } from "../Context/WishlistContext";
 
 // export default function Product() {
+//   const { addToCart } = useContext(CartContext);
+//   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
+  
 //   const [products, setProducts] = useState([]);
 //   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -188,12 +193,11 @@ export default function Product() {
 
 //   const [showCategory, setShowCategory] = useState(false);
 //   const [showSort, setShowSort] = useState(false);
-//   const [wishlistItems, setWishlistItems] = useState([]);
+//   const [showFilters, setShowFilters] = useState(false);
 
-//   // Fetch products
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5001/products")
+//       .get("http://localhost:5007/products")
 //       .then((res) => {
 //         setProducts(res.data);
 //         setFilteredProducts(res.data);
@@ -201,47 +205,23 @@ export default function Product() {
 //       .catch((err) => console.log(err));
 //   }, []);
 
-//   // Load wishlist
-//   useEffect(() => {
-//     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-//     setWishlistItems(wishlist.map(item => item.id));
-//   }, []);
-
-//   // Wishlist logic
-//   const toggleWishlist = (product, e) => {
-//     e.preventDefault();
-//     e.stopPropagation();
-    
-//     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-//     const exists = wishlist.find((item) => item.id === product.id);
-
-//     if (exists) {
-//       wishlist = wishlist.filter((item) => item.id !== product.id);
-//       setWishlistItems(prev => prev.filter(id => id !== product.id));
-//       toast.success("Removed from wishlist");
-//     } else {
-//       wishlist.push(product);
-//       setWishlistItems(prev => [...prev, product.id]);
-//       toast.success("Added to wishlist");
-//     }
-
-//     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-//   };
-
-//   // Filter + Sort
+//   // FILTER + SORT
 //   useEffect(() => {
 //     let data = [...products];
 
+//     // CATEGORY FILTER
 //     if (category !== "All") {
 //       data = data.filter((item) => item.category === category);
 //     }
 
+//     // SEARCH FILTER
 //     if (search.trim() !== "") {
 //       data = data.filter((item) =>
 //         item.name.toLowerCase().includes(search.toLowerCase())
 //       );
 //     }
 
+//     // SORT BY PRICE
 //     if (sort === "low-to-high") {
 //       data.sort((a, b) => a.price - b.price);
 //     } else if (sort === "high-to-low") {
@@ -251,14 +231,43 @@ export default function Product() {
 //     setFilteredProducts(data);
 //   }, [search, category, sort, products]);
 
+//   const categories = ["All", "Men", "Women", "Kids"];
+
+//   const clearFilters = () => {
+//     setSearch("");
+//     setCategory("All");
+//     setSort("none");
+//   };
+
+//   const handleWishlist = (e, product) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     const isInWishlist = wishlist.some(item => item.id === product.id);
+//     if (isInWishlist) {
+//       removeFromWishlist(product.id);
+//     } else {
+//       addToWishlist(product);
+//     }
+//   };
+
+//   const handleAddToCart = (e, product) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     addToCart(product);
+//   };
+
 //   return (
-//     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8">
+//     <div className="min-h-screen bg-gray-50 py-8">
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-//         {/* Header */}
-//         <div className="mb-8 border-l-4 border-black pl-4">
-//           <h1 className="text-4xl font-bold text-gray-900 mb-2">All Products</h1>
-//           <p className="text-gray-600">Discover our latest collection</p>
+//         {/* Header Section */}
+//         <div className="mb-8">
+//           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-3">
+//             All Products
+//           </h1>
+//           <p className="text-gray-600 text-lg">
+//             Discover our complete collection of {filteredProducts.length} items
+//           </p>
 //         </div>
 
 //         {/* Search Bar */}
@@ -268,7 +277,7 @@ export default function Product() {
 //             <input
 //               type="text"
 //               placeholder="Search for products..."
-//               className="w-full pl-12 pr-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-black focus:ring-opacity-10 focus:border-black outline-none transition-all shadow-sm"
+//               className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-lg bg-white shadow-sm"
 //               value={search}
 //               onChange={(e) => setSearch(e.target.value)}
 //             />
@@ -283,39 +292,42 @@ export default function Product() {
 //           </div>
 //         </div>
 
-//         {/* Filters Bar */}
-//         <div className="bg-white rounded-xl shadow-sm border-2 border-gray-200 p-4 mb-8">
-//           <div className="flex flex-wrap items-center justify-between gap-4">
+//         {/* Filter Bar */}
+//         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 mb-8">
+//           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             
-//             {/* Left Side - Filters */}
-//             <div className="flex items-center gap-3 flex-wrap">
-//               <div className="flex items-center gap-2 text-gray-600">
-//                 <SlidersHorizontal className="w-5 h-5" />
-//                 <span className="font-semibold">Filters:</span>
-//               </div>
+//             {/* Left Side - Filter Buttons */}
+//             <div className="flex flex-wrap gap-3">
+              
+//               {/* Mobile Filter Toggle */}
+//               <button
+//                 onClick={() => setShowFilters(!showFilters)}
+//                 className="md:hidden flex items-center gap-2 px-5 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-900 transition-colors"
+//               >
+//                 <Filter className="w-5 h-5" />
+//                 Filters
+//               </button>
 
-//               {/* CATEGORY DROPDOWN */}
+//               {/* Category Dropdown */}
 //               <div className="relative">
 //                 <button
-//                   onClick={() => {
-//                     setShowCategory(!showCategory);
-//                     setShowSort(false);
-//                   }}
-//                   className="flex items-center gap-2 px-5 py-2.5 border-2 border-gray-300 rounded-lg bg-white hover:border-gray-400 hover:bg-gray-50 transition-all font-semibold text-gray-700"
+//                   onClick={() => setShowCategory(!showCategory)}
+//                   className="flex items-center gap-2 px-5 py-3 bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg font-semibold text-gray-900 transition-colors"
 //                 >
-//                   <span>Category: {category}</span>
+//                   <Filter className="w-5 h-5" />
+//                   {category}
 //                   <ChevronDown className={`w-4 h-4 transition-transform ${showCategory ? 'rotate-180' : ''}`} />
 //                 </button>
 
 //                 {showCategory && (
-//                   <div className="absolute mt-2 w-44 bg-white shadow-xl border-2 border-gray-200 rounded-xl overflow-hidden z-20">
-//                     {["All", "Men", "Women", "Kids"].map((cat) => (
+//                   <div className="absolute mt-2 w-48 bg-white shadow-xl border border-gray-200 rounded-xl z-20 overflow-hidden">
+//                     {categories.map((cat) => (
 //                       <div
 //                         key={cat}
-//                         className={`px-5 py-3 cursor-pointer transition-colors font-medium ${
+//                         className={`px-5 py-3 cursor-pointer transition-colors ${
 //                           category === cat 
-//                             ? 'bg-black text-white' 
-//                             : 'hover:bg-gray-100 text-gray-700'
+//                             ? 'bg-gray-900 text-white font-semibold' 
+//                             : 'hover:bg-gray-50 text-gray-900'
 //                         }`}
 //                         onClick={() => {
 //                           setCategory(cat);
@@ -329,26 +341,24 @@ export default function Product() {
 //                 )}
 //               </div>
 
-//               {/* SORT DROPDOWN */}
+//               {/* Sort Dropdown */}
 //               <div className="relative">
 //                 <button
-//                   onClick={() => {
-//                     setShowSort(!showSort);
-//                     setShowCategory(false);
-//                   }}
-//                   className="flex items-center gap-2 px-5 py-2.5 border-2 border-gray-300 rounded-lg bg-white hover:border-gray-400 hover:bg-gray-50 transition-all font-semibold text-gray-700"
+//                   onClick={() => setShowSort(!showSort)}
+//                   className="flex items-center gap-2 px-5 py-3 bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg font-semibold text-gray-900 transition-colors"
 //                 >
-//                   <span>Sort: {sort === "none" ? "Default" : sort === "low-to-high" ? "Low → High" : "High → Low"}</span>
+//                   <SlidersHorizontal className="w-5 h-5" />
+//                   Sort
 //                   <ChevronDown className={`w-4 h-4 transition-transform ${showSort ? 'rotate-180' : ''}`} />
 //                 </button>
 
 //                 {showSort && (
-//                   <div className="absolute mt-2 w-52 bg-white shadow-xl border-2 border-gray-200 rounded-xl overflow-hidden z-20">
+//                   <div className="absolute mt-2 w-56 bg-white shadow-xl border border-gray-200 rounded-xl z-20 overflow-hidden">
 //                     <div
-//                       className={`px-5 py-3 cursor-pointer transition-colors font-medium ${
+//                       className={`px-5 py-3 cursor-pointer transition-colors ${
 //                         sort === "low-to-high" 
-//                           ? 'bg-black text-white' 
-//                           : 'hover:bg-gray-100 text-gray-700'
+//                           ? 'bg-gray-900 text-white font-semibold' 
+//                           : 'hover:bg-gray-50 text-gray-900'
 //                       }`}
 //                       onClick={() => {
 //                         setSort("low-to-high");
@@ -359,10 +369,10 @@ export default function Product() {
 //                     </div>
 
 //                     <div
-//                       className={`px-5 py-3 cursor-pointer transition-colors font-medium ${
+//                       className={`px-5 py-3 cursor-pointer transition-colors ${
 //                         sort === "high-to-low" 
-//                           ? 'bg-black text-white' 
-//                           : 'hover:bg-gray-100 text-gray-700'
+//                           ? 'bg-gray-900 text-white font-semibold' 
+//                           : 'hover:bg-gray-50 text-gray-900'
 //                       }`}
 //                       onClick={() => {
 //                         setSort("high-to-low");
@@ -373,10 +383,10 @@ export default function Product() {
 //                     </div>
 
 //                     <div
-//                       className={`px-5 py-3 cursor-pointer transition-colors font-medium ${
+//                       className={`px-5 py-3 cursor-pointer transition-colors ${
 //                         sort === "none" 
-//                           ? 'bg-black text-white' 
-//                           : 'hover:bg-gray-100 text-gray-700'
+//                           ? 'bg-gray-900 text-white font-semibold' 
+//                           : 'hover:bg-gray-50 text-gray-900'
 //                       }`}
 //                       onClick={() => {
 //                         setSort("none");
@@ -389,122 +399,118 @@ export default function Product() {
 //                 )}
 //               </div>
 
-//               {/* Active Filters Badge */}
-//               {(category !== "All" || sort !== "none" || search) && (
+//               {/* Clear Filters Button */}
+//               {(category !== "All" || sort !== "none" || search !== "") && (
 //                 <button
-//                   onClick={() => {
-//                     setCategory("All");
-//                     setSort("none");
-//                     setSearch("");
-//                   }}
-//                   className="px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors font-medium text-sm"
+//                   onClick={clearFilters}
+//                   className="flex items-center gap-2 px-5 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold text-gray-900 transition-colors"
 //                 >
-//                   Clear Filters
+//                   <X className="w-5 h-5" />
+//                   Clear All
 //                 </button>
 //               )}
 //             </div>
 
 //             {/* Right Side - Results Count */}
-//             <div className="text-sm text-gray-600 font-medium">
-//               {filteredProducts.length} {filteredProducts.length === 1 ? 'Product' : 'Products'}
+//             <div className="text-gray-600 font-medium">
+//               Showing <span className="text-gray-900 font-bold">{filteredProducts.length}</span> products
 //             </div>
 //           </div>
 //         </div>
 
-//         {/* PRODUCT GRID */}
-//         {filteredProducts.length === 0 ? (
-//           <div className="text-center py-20">
-//             <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-gray-200">
-//               <Search className="w-12 h-12 text-gray-400" />
+//         {/* Product Grid */}
+//         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+//           {filteredProducts.length === 0 ? (
+//             <div className="col-span-full text-center py-20">
+//               <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-4">
+//                 <Search className="w-10 h-10 text-gray-400" />
+//               </div>
+//               <h3 className="text-2xl font-bold text-gray-900 mb-2">No products found</h3>
+//               <p className="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
+//               <button
+//                 onClick={clearFilters}
+//                 className="px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+//               >
+//                 Clear Filters
+//               </button>
 //             </div>
-//             <h3 className="text-2xl font-bold text-gray-900 mb-2">No products found</h3>
-//             <p className="text-gray-600">Try adjusting your filters or search terms</p>
-//           </div>
-//         ) : (
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-//             {filteredProducts.map((p) => {
-//               const isWish = wishlistItems.includes(p.id);
-
-//               return (
-//                 <div
-//                   key={p.id}
-//                   className="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-black hover:shadow-xl transition-all duration-300"
-//                 >
-//                   <Link to={`/product/${p.id}`} className="block relative">
-//                     {/* Product Image */}
-//                     <div className="relative overflow-hidden bg-gray-100">
-//                       <img
-//                         src={p.image || "https://via.placeholder.com/300"}
-//                         alt={p.name}
-//                         className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-//                       />
-                      
-//                       {/* Wishlist Button */}
-//                       <button
-//                         onClick={(e) => toggleWishlist(p, e)}
-//                         className={`absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-lg ${
-//                           isWish 
-//                             ? 'bg-red-500 text-white scale-110' 
-//                             : 'bg-white text-gray-600 hover:bg-red-50 hover:text-red-500'
-//                         }`}
-//                       >
-//                         <Heart className={`w-5 h-5 ${isWish ? 'fill-current' : ''}`} />
-//                       </button>
-
-//                       {/* Price Badge */}
-//                       <div className="absolute bottom-4 left-4 bg-black text-white px-4 py-2 rounded-full shadow-lg">
-//                         <span className="text-lg font-bold">₹{p.price}</span>
-//                       </div>
-//                     </div>
-//                   </Link>
-
-//                   {/* Product Details */}
-//                   <div className="p-5">
-//                     <Link to={`/product/${p.id}`}>
-//                       <h2 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[3.5rem]">
-//                         {p.name}
-//                       </h2>
-//                     </Link>
-
-//                     <div className="flex items-center justify-between mb-4">
-//                       <span className="text-2xl font-bold text-gray-900">₹{p.price}</span>
-//                       <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">
-//                         {p.category || "Fashion"}
-//                       </span>
-//                     </div>
-
-//                     {/* Action Buttons */}
-//                     <div className="flex gap-2">
-//                       <button
-//                         onClick={(e) => toggleWishlist(p, e)}
-//                         className={`flex-1 px-4 py-2.5 rounded-lg font-semibold transition-all ${
-//                           isWish
-//                             ? 'bg-red-100 text-red-700 hover:bg-red-200'
-//                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-//                         }`}
-//                       >
-//                         {isWish ? '💖 Saved' : '❤️ Wishlist'}
-//                       </button>
-
-//                       <Link
-//                         to={`/checkout/${p.id}`}
-//                         className="flex-1 text-center px-4 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
-//                       >
-//                         <span className="flex items-center justify-center gap-2">
-//                           <ShoppingCart className="w-4 h-4" />
-//                           Order
-//                         </span>
-//                       </Link>
-//                     </div>
+//           ) : (
+//             filteredProducts.map((p) => (
+//               <Link
+//                 key={p.id}
+//                 to={`/product/${p.id}`}
+//                 className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+//               >
+//                 {/* Product Image */}
+//                 <div className="relative overflow-hidden bg-gray-100 aspect-[3/4]">
+//                   <img
+//                     src={p.image || "https://via.placeholder.com/300"}
+//                     alt={p.name}
+//                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+//                   />
+                  
+//                   {/* Hover Overlay - Black Background */}
+//                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300"></div>
+                  
+//                   {/* Wishlist Heart Icon - Top Right */}
+//                   <button
+//                     onClick={(e) => handleWishlist(e, p)}
+//                     className="absolute top-3 right-3 p-2.5 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 z-10 group/heart"
+//                   >
+//                     <Heart 
+//                       className={`w-5 h-5 transition-colors ${
+//                         wishlist.some(item => item.id === p.id)
+//                           ? 'fill-red-500 text-red-500'
+//                           : 'text-gray-700 group-hover/heart:text-red-500'
+//                       }`}
+//                     />
+//                   </button>
+                  
+//                   {/* Cart Icon - Appears on Hover Center */}
+//                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+//                     <button
+//                       onClick={(e) => handleAddToCart(e, p)}
+//                       className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-xl hover:bg-gray-100 transform hover:scale-110 transition-all"
+//                     >
+//                       <ShoppingCart className="w-5 h-5" />
+//                       Add to Cart
+//                     </button>
 //                   </div>
 //                 </div>
-//               );
-//             })}
+
+//                 {/* Product Info */}
+//                 <div className="p-4">
+//                   <h2 className="text-base font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-gray-700 transition-colors">
+//                     {p.name}
+//                   </h2>
+                  
+//                   <div className="flex items-center justify-between">
+//                     <p className="text-xl font-bold text-gray-900">
+//                       ₹{p.price?.toLocaleString()}
+//                     </p>
+                    
+//                     {/* Category Badge */}
+//                     {p.category && (
+//                       <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
+//                         {p.category}
+//                       </span>
+//                     )}
+//                   </div>
+//                 </div>
+//               </Link>
+//             ))
+//           )}
+//         </div>
+
+//         {/* Load More Button (Optional) */}
+//         {filteredProducts.length > 0 && (
+//           <div className="text-center mt-12">
+//             <p className="text-gray-600 mb-4">
+//               Showing all {filteredProducts.length} products
+//             </p>
 //           </div>
 //         )}
 //       </div>
 //     </div>
 //   );
 // }
-
-

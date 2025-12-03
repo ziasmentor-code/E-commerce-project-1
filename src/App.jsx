@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 // Context Providers
 import { CartProvider } from "./Context/CartContext";
 import { WishlistProvider } from "./Context/WishlistContext";
+import Categories from "./pages/Categories";
+import CategoryProducts from "./pages/CategoryProducts";
+
 
 // User Pages
 import Home from "./pages/Home";
@@ -36,6 +39,7 @@ import AdminSidebar from "./Admin/AdminSidebar";
 // Layout Components
 import PublicLayout from "./layouts/PublicLayout";
 import AdminLayout from "./layouts/AdminLayout";
+import AdminUserView from "./Admin/AdminUserView";
 
 function App() {
   return (
@@ -101,8 +105,13 @@ function App() {
                 }
               />
             </Route>
-
-            {/* Catch-all redirect */}
+            <Route path="/admin/user/:id" element={
+              <ProtectedRoutes roleRequired="admin">
+                <AdminUserView />
+              </ProtectedRoutes>
+            }/>
+        <Route path="/categories" element={<Categories />} />
+<Route path="/categories/:id" element={<CategoryProducts />} />
             <Route path="*" element={<Navigate to="/" />} />
             
 

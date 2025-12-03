@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 const PublicLayout = () => {
   return (
     <>
+    
       <Navbar />
       <main className="min-h-[80vh]">
         <Outlet />

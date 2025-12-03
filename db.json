@@ -1,12 +1,31 @@
 {
   "products": [
     {
+      "id": "1",
+      "name": "Halter Neck Cotton Maxi Dress",
+      "category": "Women",
+      "price": 500,
+      "image": "https://uptownie.com/cdn/shop/files/2_2_197da7ea-fe6a-41cb-8ec3-5a8dc76dc3be_540x.png?v=1763535419",
+      "description": "Step into effortless style with our Halter Neck Cotton Maxi Dress! This must-have piece is crafted from soft, breathable cotton that keeps you cool and comfy all day. The flattering halter neck design adds a chic, modern touch, while the side pockets bring a dash of practicality and fun. The smocked back ensures that the fit hugs you just right and the halter neck tie detail makes adjustments easy. Whether you're sipping iced coffee with friends or strolling through the park, this dress has you covered in style. With its flowy fit and relaxed vibe, it's your go-to for both comfort and fashion—perfect for those sun-filled days when you want to look as good as you feel!This dress is machine washable, and wrinkle resistant, making it the perfect vacay fit. The colour will not fade no matter how many times you wash it, so enjoy with ease.",
+      "stock": "5"
+    },
+    {
+      "id": "2",
+      "name": "Vark Ivory Embellished A-Line Cotton Ethnic Set",
+      "category": "Women",
+      "price": 1600,
+      "image": "https://www.westside.com/cdn/shop/files/301041365OFFWHITE_1.jpg?v=1764340503&width=493",
+      "description": "Vark introduces this ivory set crafted in soft cotton for graceful festive ease. The A-line kurta features delicate embellished bird motifs and a refined crew neck that brings understated elegance to the look. It pairs with matching palazzos designed with an elasticated waistband for a snug yet relaxed fit and a beautifully flared fall., comfortable feel that keeps you looking stylish all day long.",
+      "stock": "5"
+    },
+    {
       "id": "3",
       "name": "women solid long sleeve faux fur jacket",
       "category": "Women",
       "price": 1600,
       "image": "https://img0.junaroad.com/uiproducts/22086224/zoom_0-1758026303.jpg",
-      "description": "Step into effortless elegance with this beautifully crafted Printed Polyester Square Neck Dress. Made from lightweight, durable polyester, this dress offers a smooth, comfortable feel that keeps you looking stylish all day long."
+      "description": "Step into effortless elegance with this beautifully crafted Printed Polyester Square Neck Dress. Made from lightweight, durable polyester, this dress offers a smooth, comfortable feel that keeps you looking stylish all day long.",
+      "stock": "5"
     },
     {
       "id": "4",
@@ -14,7 +33,8 @@
       "category": "Women",
       "price": 1600,
       "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
-      "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions."
+      "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+      "stock": "10"
     },
     {
       "id": "5",
@@ -22,7 +42,8 @@
       "category": "Women",
       "price": 2000,
       "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/SS23GH2823PCAM/SS23GH2823PCAM_BLUE/SS23GH2823PCAM_BLUE.jpg_2000Wx3000H",
-      "description": "A graceful Floral Cotton Round Neck Women’s Kurta Pant Set crafted for everyday comfort and elegant style. Soft cotton fabric with beautiful floral prints makes it perfect for casual and festive wear."
+      "description": "A graceful Floral Cotton Round Neck Women’s Kurta Pant Set crafted for everyday comfort and elegant style. Soft cotton fabric with beautiful floral prints makes it perfect for casual and festive wear.",
+      "stock": "54"
     },
     {
       "id": "6",
@@ -30,15 +51,17 @@
       "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026280001-Enhanced-1.jpg?v=1762853269&width=1946",
-      "description": "A comfortable Kids Pink Knitted Bodycon Dress designed with a soft stretch knit fabric for a secure and easy fit."
+      "description": "A comfortable Kids Pink Knitted Bodycon Dress designed with a soft stretch knit fabric for a secure and easy fit.",
+      "stock": "5"
     },
     {
       "id": "7",
-      "name": "black cotton blend coord set",
-      "category": "Men",
-      "price": 2000,
-      "image": "https://img1.junaroad.com/uiproducts/21143649/zoom_1-1713865706.jpg",
-      "description": "A stylish Black Cotton Blend Coord Set designed for effortless comfort and modern everyday style."
+      "name": "Kids Off-White Animal Design Cotton-Blend Sweatshirt",
+      "category": "Kids",
+      "price": 900,
+      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301039433001-Enhanced-1.jpg?v=1762853547&width=493",
+      "description": "Playful and full of charm, this off-white sweatshirt by HOP Kids brings a fun twist to cozy dressing. Crafted from a cotton-rich fabric, it features a creative crossbody strap detail leading to a 3D cow-face pocket complete with embroidered features and a tiny bow. Finished with a crew neck and full sleeves, it’s perfect for keeping little ones warm in style.",
+      "stock": "15"
     },
     {
       "id": "8",
@@ -46,15 +69,17 @@
       "category": "Women",
       "price": 2000,
       "image": "https://img0.junaroad.com/uiproducts/19117950/zoom_0-1687938205.jpg",
-      "description": "Upgrade your wardrobe with this chic Black Cotton Blend Coord Set. "
+      "description": "Upgrade your wardrobe with this chic Black Cotton Blend Coord Set. ",
+      "stock": "55"
     },
     {
       "id": "9",
-      "name": "blue cotton asymmetric kurta",
-      "category": "Men",
-      "price": 1255,
-      "image": "https://img0.junaroad.com/uiproducts/15277359/zoom_0-1530614961.jpg",
-      "description": "A trendy Blue Cotton Asymmetric Kurta crafted from soft, breathable cotton with a modern asymmetric hem for a stylish everyday look."
+      "name": "Kids Red Striped Cotton Polo Sweater",
+      "category": "Kids",
+      "price": 1855,
+      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025539006-Upscaled-2_1.jpg?v=1762846818&width=493",
+      "description": "Bring a playful twist to their playground lineup with this red polo sweater from HOP Kids. Milled from pure cotton, it’s fashioned with bold stripes that strike the perfect balance of fun and smart. A crisp collar with a buttoned placket sharpens the look, while long sleeves make it a cosy go-to for cooler days.",
+      "stock": "35"
     },
     {
       "id": "10",
@@ -62,7 +87,8 @@
       "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025537001-Upscaled-1_1.jpg?v=1762846450&width=1946",
-      "description": "The chic colour-blocked design adds a fun, modern touch, and the classic polo collar brings a smart, polished look. Perfect for outings, school days, family gatherings, or casual winter wear."
+      "description": "The chic colour-blocked design adds a fun, modern touch, and the classic polo collar brings a smart, polished look. Perfect for outings, school days, family gatherings, or casual winter wear.",
+      "stock": "5"
     },
     {
       "id": "11",
@@ -70,15 +96,17 @@
       "category": "Women",
       "price": 2189,
       "image": "https://img2.junaroad.com/uiproducts/21748765/pri_175_p-1740793703.jpg",
-      "description": " A versatile Women’s Solid Long-Sleeves Regular Jacket designed for everyday style and comfort. Perfect for layering in any season."
+      "description": " A versatile Women’s Solid Long-Sleeves Regular Jacket designed for everyday style and comfort. Perfect for layering in any season.",
+      "stock": "8"
     },
     {
       "id": "12",
       "name": "white cotton regular shirt",
       "category": "Women",
       "price": 2189,
-      "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
-      "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style."
+      "image": "https://uptownie.com/cdn/shop/files/default21-08-2025-20388_540x.jpg?v=1758706180",
+      "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style.",
+      "stock": "30"
     },
     {
       "id": "13",
@@ -86,15 +114,17 @@
       "category": "Women",
       "price": 499,
       "image": "https://img0.junaroad.com/uiproducts/20570622/zoom_0-1701870795.jpg",
-      "description": "A trendy Purple Cotton Crop Top made from soft, breathable fabric for effortless everyday style."
+      "description": "A trendy Purple Cotton Crop Top made from soft, breathable fabric for effortless everyday style.",
+      "stock": "5"
     },
     {
       "id": "14",
       "name": "women solid long sleeves straight top",
       "category": "Women",
-      "price": 599,
-      "image": "https://img2.junaroad.com/uiproducts/21666382/pri_175_p-1733328210.jpg",
-      "description": "A sleek Women’s Solid Long Sleeves Straight Top designed for everyday comfort and effortless style."
+      "price": 2759,
+      "image": "https://uptownie.com/cdn/shop/files/default_2_36_540x.jpg?v=1757509774",
+      "description": "Get ready to level up your style with our Corset Panelled Midi Dress! With bold corset detailing that flatters your shape and a sleek, modern fit, this dress is all about confidence and effortless chic. The midi length keeps it classy, while the side pockets add that perfect touch of practicality. Whether you're dressing it up with heels or keeping it casual with sneakers, this dress is a must-have for any occasion. Sleek functional, and well fitted with convenient pockets—because who says you can’t look amazing and carry your phone at the same time? Its quick drying fabric helps avoid sweat patches plus it is made of crease-free fabric thus making it travel friendly..",
+      "stock": "9"
     },
     {
       "id": "15",
@@ -102,7 +132,8 @@
       "category": "Women",
       "price": 739,
       "image": "https://img0.junaroad.com/uiproducts/19595614/zoom_0-1679639786.jpg",
-      "description": "A stylish Grey Cotton Blend Top and Palazzos Coord Set designed for effortless comfort, modern elegance, and all-day wear."
+      "description": "A stylish Grey Cotton Blend Top and Palazzos Coord Set designed for effortless comfort, modern elegance, and all-day wear.",
+      "stock": "5"
     },
     {
       "id": "16",
@@ -110,23 +141,26 @@
       "category": "Women",
       "price": 1159,
       "image": "https://img1.junaroad.com/uiproducts/18720841/zoom_1-1669782339.jpg",
-      "description": "A stylish Shirt Collar Printed Bottom Set featuring a smart collared top paired with trendy printed bottoms for a chic everyday look."
+      "description": "A stylish Shirt Collar Printed Bottom Set featuring a smart collared top paired with trendy printed bottoms for a chic everyday look.",
+      "stock": "15"
     },
     {
       "id": "17",
-      "name": "men white solids collared neck casual shirt",
-      "category": "Men",
+      "name": " Kids Off-White Text Pattern Cotton Sweatshirt",
+      "category": "Kids",
       "price": 609,
-      "image": "https://img0.junaroad.com/uiproducts/20767951/zoom_0-1717506448.jpg",
-      "description": "A classic Men’s White Solid Collared Neck Casual Shirt designed for everyday comfort and effortless style."
+      "image": "https://www.westside.com/cdn/shop/files/301028834OFFWHITE_1_b1b7bbc2-6ee3-4ee3-ac78-5e9eab7e35d6.jpg?v=1758547307&width=493",
+      "description": "A cozy twist on casual cool, this off-white sweatshirt from HOP Kids stands out with stylised text embroidery on a cotton-rich fabric. Designed with a contrast spread collar and full sleeves, it’s the perfect blend of comfort and style for relaxed winter days..",
+      "stock": "4"
     },
     {
       "id": "18",
-      "name": "navy blue cotton t-shirt",
-      "category": "Men",
+      "name": "Baby Off-White Faux-Fur Jacket",
+      "category": "Kids",
       "price": 999,
-      "image": "https://img0.junaroad.com/uiproducts/15614795/zoom_0-1709818465.jpg",
-      "description": "A classic Navy Blue Cotton T-Shirt made from soft, breathable fabric for everyday comfort and style."
+      "image": "https://www.westside.com/cdn/shop/files/WS-HOP-Baby-Boys-Enhanced_33.jpg?v=1762152830&width=1946",
+      "description": "Soft, warm and irresistibly cute, this off-white jacket from HOP Baby is crafted in plush faux-fur for gentle comfort. Designed with a hood, zipper placket and kangaroo pockets, it is finished with a sweet teddy motif at the back, making it a delightful layer to keep little ones snug on chilly days.",
+      "stock": "9"
     },
     {
       "id": "19",
@@ -134,7 +168,8 @@
       "category": "Women",
       "price": 999,
       "image": "https://img2.junaroad.com/uiproducts/22058739/pri_175_p-1759830169.jpg",
-      "description": "A chic Women’s Solid Long Sleeve Fur Detailed Jacket designed for warm, stylish, and elegant winter layering."
+      "description": "A chic Women’s Solid Long Sleeve Fur Detailed Jacket designed for warm, stylish, and elegant winter layering.",
+      "stock": "35"
     },
     {
       "id": "20",
@@ -142,7 +177,8 @@
       "category": "Kids",
       "price": 999,
       "image": "https://www.westside.com/cdn/shop/files/301026284BLACK_1.jpg?v=1763025932&width=493",
-      "description": "A cozy Y&F Kids Black and White Fleece Jacket designed for warmth, comfort, and everyday winter style."
+      "description": "A cozy Y&F Kids Black and White Fleece Jacket designed for warmth, comfort, and everyday winter style.",
+      "stock": "5"
     },
     {
       "id": "21",
@@ -150,7 +186,8 @@
       "category": "Women",
       "price": 1600,
       "image": "https://www.westside.com/cdn/shop/files/301031105GREY_1.jpg?v=1756218022&width=1946",
-      "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit."
+      "description": "Step into retro-inspired style with our Flared High-Waist Jeans. Designed to sculpt your waist and elongate your legs, these jeans feature a soft stretch-denim fabric for all-day comfort. The high-rise fit enhances your natural shape, while the dramatic flare adds movement and a bold, fashionable look. Perfect to pair with fitted tops, crop tees, or heels for an effortlessly stylish outfit.",
+      "stock": "95"
     },
     {
       "id": "22",
@@ -158,7 +195,8 @@
       "category": "Women",
       "price": 2000,
       "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/SS23GH2832PCAM/SS23GH2832PCAM_BLUE/SS23GH2832PCAM_BLUE.jpg_2000Wx3000H",
-      "description": "A beautiful Floral Full Length Cotton Woven Women’s Skirt Kurta Dupatta Set crafted for elegant, breathable, and festive-ready style."
+      "description": "A beautiful Floral Full Length Cotton Woven Women’s Skirt Kurta Dupatta Set crafted for elegant, breathable, and festive-ready style.",
+      "stock": "25"
     },
     {
       "id": "23",
@@ -166,7 +204,8 @@
       "category": "Kids",
       "price": 2000,
       "image": "https://www.westside.com/cdn/shop/files/301027893OATMEAL.jpg?v=1758178708&width=493",
-      "description": "A soft and cozy Baby Beige Fleece Detailed Sweater designed for warmth, comfort, and adorable winter style."
+      "description": "A soft and cozy Baby Beige Fleece Detailed Sweater designed for warmth, comfort, and adorable winter style.",
+      "stock": "65"
     },
     {
       "id": "24",
@@ -174,7 +213,8 @@
       "category": "Women",
       "price": 1499,
       "image": "https://www.westside.com/cdn/shop/files/301043576TEAL_1.jpg?v=1763042958&width=493",
-      "description": "A stylish Green Schiffli Embroidered Cotton Blouse crafted with intricate detailing for a fresh, elegant look."
+      "description": "A stylish Green Schiffli Embroidered Cotton Blouse crafted with intricate detailing for a fresh, elegant look.",
+      "stock": "5"
     },
     {
       "id": "25",
@@ -182,31 +222,34 @@
       "category": "Women",
       "price": 2199,
       "image": "https://www.westside.com/cdn/shop/files/301043211BLACK_1.jpg?v=1763042960&width=493",
-      "description": "A chic Black Denim A-Line Dress designed for effortless style, comfort, and a flattering silhouette."
+      "description": "A chic Black Denim A-Line Dress designed for effortless style, comfort, and a flattering silhouette.",
+      "stock": "5"
     },
     {
       "id": "26",
-      "name": "Olive Textured Relaxed-Fit Cotton Jacket",
-      "category": "Men",
+      "name": "Front Pleated Cotton Midi Dress",
+      "category": "women",
       "price": 1999,
-      "image": "https://www.westside.com/cdn/shop/files/301038329DKOLIVE_2.jpg?v=1763017450&width=493",
-      "description": "Discover effortless charm with this elegant denim midi dress — made from soft"
+      "image": "https://uptownie.com/cdn/shop/files/image_2_1_10_540x.jpg?v=1758865714",
+      "description": "This easy breezy dress comes with pleats along the frontline which gives this dress an A-Line look, making it super comfortable to carry. It is a must have for your vacations, lunch, or a day out running errands. The comfortable silhouette is flattering yet convenient. Made from smooth, wrinkle resistant fabric. Its quick drying fabric helps avoid sweat patches. The premium cotton fabric used to craft this dress ensures easy breathability and comfort. ",
+      "stock": "5"
     },
     {
       "id": "27",
-      "name": "Olive Textured Relaxed-Fit Cotton Jacket",
-      "category": "Men",
-      "price": 1999,
-      "image": "https://www.westside.com/cdn/shop/files/301038329DKOLIVE_2.jpg?v=1763017450&width=493",
-      "description": "Designed in a relaxed fit, this jacket gives you effortless layering and all-day ease—perfect for pairing with tees, tanks, or dresses. The olive green shade keeps it classic and easy to style, making it a must-have piece for casual outings, travel days, or an elevated streetwear look."
+      "name": "Ruched Tie-up Sleeves Cotton Shirt",
+      "category": "Women",
+      "price": 599,
+      "image": "https://uptownie.com/cdn/shop/files/2-12-2414310_540x.jpg?v=1760444005",
+      "description": "Add some flair to your basics with this Ruched Tie-Up Sleeves Cotton Shirt. Crafted from soft, breathable cotton, this shirt combines ultimate comfort with stylish details. The ruched, tie-up sleeves give it a trendy, relaxed vibe, while the two upper pockets add an extra touch of practicality and style. Whether you’re pairing it with your favorite jeans or leggings, this shirt is perfect for casual days when you want to look effortlessly chic. Simple, stylish, and totally on-trend—your new go-to piece for laid-back, cool vibes!The premium fabric is wrinkle-free and colour bleeding resistant and machine washable thereby making it long lasting and easy to maintain. No colour will come out in the wash, and every wash will only make the shirt better! The colours won't fade, and the shirt will keep it's shape!"
     },
     {
       "id": "28",
-      "name": "Studiofit Black Striped Relaxed-Fit Mid-Rise Track Pants",
-      "category": "Men",
-      "price": 1999,
-      "image": "https://www.westside.com/cdn/shop/files/301037964BLACK_1.jpg?v=1763377681&width=1946",
-      "description": "Crafted from a soft, breathable fabric blend, they ensure all-day comfort—perfect for workouts, travel, lounging, or casual streetwear. The mid-rise waist offers a secure, flattering fit, while the relaxed leg provides easy movement and a laid-back vibe."
+      "name": "Baby Light Blue Rainbow Design Sweater",
+      "category": "Kids",
+      "price": 900,
+      "image": "https://www.westside.com/cdn/shop/files/301025709BLUE.jpg?v=1757658691&width=1946",
+      "description": "Brighten up chilly days with this light blue sweater from HOP Baby, featuring a cheerful rainbow design on the front. Made for warmth and comfort, it’s styled with a round neck, full sleeves, and a soft fleece lining that keeps your little one snug through every cosy moment.flattering fit, while the relaxed leg provides easy movement and a laid-back vibe.",
+      "stock": "6"
     },
     {
       "id": "29",
@@ -214,7 +257,8 @@
       "category": "Women",
       "price": 1999,
       "image": "https://www.westside.com/cdn/shop/files/301031073IVORY_2.jpg?v=1763042959&width=1946",
-      "description": "Elevate your everyday style with this chic Off-White Solid Jacket from Wardrobe. Designed for modern, confident women, this jacket blends elegance with versatility, making it perfect for both workwear and casual outings."
+      "description": "Elevate your everyday style with this chic Off-White Solid Jacket from Wardrobe. Designed for modern, confident women, this jacket blends elegance with versatility, making it perfect for both workwear and casual outings.",
+      "stock": "50"
     },
     {
       "id": "30",
@@ -222,7 +266,8 @@
       "category": "Kids",
       "price": 1999,
       "image": "https://www.westside.com/cdn/shop/files/301027086OFFWHITE.jpg?v=1758178205&width=493",
-      "description": "Dress your little one in adorable comfort with this Baby Beige Crochet-Detailed Cotton Shirt and Shorts Set. Made from soft, breathable cotton, this outfit ensures all-day ease for active toddlers while keeping them looking stylish."
+      "description": "Dress your little one in adorable comfort with this Baby Beige Crochet-Detailed Cotton Shirt and Shorts Set. Made from soft, breathable cotton, this outfit ensures all-day ease for active toddlers while keeping them looking stylish.",
+      "stock": "25"
     },
     {
       "id": "31",
@@ -230,7 +275,8 @@
       "category": "Women",
       "price": 2179,
       "image": "https://img2.junaroad.com/uiproducts/20917147/zoom_0-1707297404.jpg",
-      "description": "Wrap yourself in pure comfort and charm with this stunning Lavender Faux Fur Jacket. Designed to make a statement, this jacket features a plush, ultra-soft faux fur texture that feels luxurious and looks effortlessly stylish. The soothing lavender shade adds a dreamy, feminine touch, perfect for elevating any winter outfit."
+      "description": "Wrap yourself in pure comfort and charm with this stunning Lavender Faux Fur Jacket. Designed to make a statement, this jacket features a plush, ultra-soft faux fur texture that feels luxurious and looks effortlessly stylish. The soothing lavender shade adds a dreamy, feminine touch, perfect for elevating any winter outfit.",
+      "stock": "45"
     },
     {
       "id": "32",
@@ -238,23 +284,26 @@
       "category": "Kids",
       "price": 1499,
       "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/WS-HOP-Baby-Girls-Face-Enhanced-20_800x.jpg?v=1762437514",
-      "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance."
+      "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance.",
+      "stock": "15"
     },
     {
       "id": "33",
-      "name": "Highlander",
-      "category": "Men",
+      "name": "Kids Off-White Animal Printed Cotton-Blend Hoodie",
+      "category": "Kids",
       "price": 1116,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/HLJN004461_4.jpg",
-      "description": "Dress your little one in adorable charm with this Baby Pink Butterfly Design Cotton Sweatshirt and Skirt Set. Made from soft, breathable cotton, this outfit keeps your child comfortable while adding a touch of playful elegance."
+      "image": "https://www.westside.com/products/hop-kids-brown-suede-jacket-301025480?variant=44780830556213",
+      "description": "This brown jacket by HOP Kids offers a refined yet practical style. Fashioned with a luxurious suede finish, it features a stand collar that extends to a zipper placket and multiple zippered pockets on the front. Complete with ribbed cuffs and hem, it ensures a sleek design and comfortable fit for any adventure.",
+      "stock": "5"
     },
     {
       "id": "34",
-      "name": "HOP Kids Brown Ombre Sweater",
-      "category": "Kids",
+      "name": "Printed Shirt with Front Twist Skirt Co-ord",
+      "category": "Women",
       "price": 899,
-      "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Boys-301025730001-Enhanced-1.jpg?v=1762248380&width=493",
-      "description": "HOP Kids brings charm to winter dressing with this brown ombre sweater. Detailed with adorable animal motifs, it’s crafted from sumptuous fabric for a warm, cozy feel. Designed with a crew neck and full sleeves, it makes a playful yet comfortable addition to their cold-weather wardrobe."
+      "image": "https://uptownie.com/cdn/shop/files/03-05-202507877_540x.jpg?v=1758797454,",
+      "description": "HOP Kids brings charm to winter dressing with this brown ombre sweater. Detailed with adorable animal motifs, it’s crafted from sumptuous fabric for a warm, cozy feel. Designed with a crew neck and full sleeves, it makes a playful yet comfortable addition to their cold-weather wardrobe.",
+      "stock": "25"
     },
     {
       "id": "35",
@@ -262,7 +311,80 @@
       "category": "Women",
       "price": "1218",
       "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301029622YELLOW_1_800x.jpg?v=1754559742",
-      "description": "These yellow ethnic pants from Diza are adorned with floral motifs for a stylish statement. Made from a breathable fabric, they’re designed for all-day comfort and ease. An elasticated waistband with adjustable drawstrings ensures a flexible fit, while side pockets offer a functional touch."
+      "description": "These yellow ethnic pants from Diza are adorned with floral motifs for a stylish statement. Made from a breathable fabric, they’re designed for all-day comfort and ease. An elasticated waistband with adjustable drawstrings ensures a flexible fit, while side pockets offer a functional touch.",
+      "stock": "5"
+    },
+    {
+      "id": "36",
+      "name": "Printed Two Piece Cotton Coord Set",
+      "category": "Women",
+      "price": "1218",
+      "image": "https://uptownie.com/cdn/shop/files/image_2_1_540x.jpg?v=1758798008",
+      "description": "These yellow ethnic pants from Diza are adorned with floral motifs for a stylish statement. Made from a breathable fabric, they’re designed for all-day comfort and ease. An elasticated waistband with adjustable drawstrings ensures a flexible fit, while side pockets offer a functional touch.",
+      "stock": "5"
+    },
+    {
+      "id": "37",
+      "name": "On the Go Two Piece Pleated Shirt & Pants Co-ord set",
+      "category": "Women",
+      "price": "900",
+      "image": "https://uptownie.com/cdn/shop/files/60_462caafe-92e0-453d-b834-6d5f0d3b5c96_540x.png?v=1758799017",
+      "description": "Printed Two-Piece Cotton Coord Set — effortless style, all day comfort.",
+      "stock": "5"
+    },
+    {
+      "id": "38",
+      "name": "Cotton Drawstring Midi Dress",
+      "category": "Women",
+      "price": "2899",
+      "image": "https://uptownie.com/cdn/shop/files/2_cbbc579c-f769-4340-a1f2-d0a095da7fd2_540x.png?v=1761379903",
+      "description": "Lightweight Cotton Drawstring Midi Dress for Everyday Comfort",
+      "stock": "100"
+    },
+    {
+      "id": "39",
+      "name": "Puff Sleeve A-Line Cotton Maxi Dress",
+      "category": "Women",
+      "price": "3200",
+      "image": "https://uptownie.com/cdn/shop/files/23_31d40464-ae71-414c-b2de-1b316995154f_540x.png?v=1758713914",
+      "description": "The perfect Puff Sleeve A-Line Cotton Maxi—effortless and chic",
+      "stock": "10"
+    },
+    {
+      "id": "40",
+      "name": "Pleated Midi Skirt",
+      "category": "Women",
+      "price": "500",
+      "image": "https://uptownie.com/cdn/shop/files/37_e6982dfb-3fcc-43ce-8a08-aa9f26a7aa65_540x.png?v=1758781649",
+      "description": "This Pleated Midi Skirt features a flowy silhouette with finely pressed pleats that move beautifully with every step. Designed for comfort and timeless elegance, it pairs effortlessly with tops, shirts, and occasion wear.",
+      "stock": "10"
+    },
+    {
+      "id": "41",
+      "name": "Linen Two Piece Co-ord Set",
+      "category": "Women",
+      "price": "1240",
+      "image": "https://uptownie.com/cdn/shop/files/1_3eca007b-13bb-4c71-8a3b-964dbdb65270_540x.jpg?v=1758797036",
+      "description": "This Stretchable Full Sleeves Peplum Top features a soft, flexible fabric that offers a comfortable and flattering fit. The peplum flare adds a feminine touch, while the full sleeves elevate the overall elegance—perfect for both casual and semi-formal looks.",
+      "stock": "10"
+    },
+    {
+      "id": "42",
+      "name": "Box Pleated Linen Midi Skirt",
+      "category": "Women",
+      "price": "2,830",
+      "image": "https://uptownie.com/cdn/shop/files/7_0024c763-56a2-46b8-a4b3-b6c5224d0d29_540x.png?v=1758698006",
+      "description": "Look high on style, by wearing this pair of pleated skirt. Featuring a boxy pleated, this trendy and uber chic piece gives you a perfect feminine charm. The oh-so-trendy silhouette is bound to flatter any body type. You can pair this up with blouse top and high heels or flats to look like a stunner.",
+      "stock": "10"
+    },
+    {
+      "id": "43",
+      "name": "Box Pleated Linen Midi Skirt",
+      "category": "Women",
+      "price": "2,830",
+      "image": "https://uptownie.com/cdn/shop/files/1_8daee51f-1262-41bd-a79a-726acfa0596b_540x.png?v=1709620775",
+      "description": "LThis item is on final sale and not eligible for return or exchange.Ace the soft girl vibe with the Asymmetric Linen Co-ord set! The set features linen pants and a linen shirt which is longer in the back, and shorter in the front. The pants have a smooth waistband in the front, and a soft  elasticated back for the perfect fit. We have used the best quality linen fabric for this set, and have developed special technology to make sure that the linen wrinkles less so you can easily go through the day looking as polished as you did in the morning! The premium fabric is colour bleeding resistant and machine washable thereby making it long lasting and easy to maintain.",
+      "stock": "10"
     }
   ],
   "users": [
@@ -270,7 +392,9 @@
       "id": "4e25",
       "name": "aleema",
       "email": "z123@gmail.com",
-      "password": "aleema@gmail.com"
+      "password": "aleema@gmail.com",
+      "isAdmin": false,
+      "blocked": false
     },
     {
       "id": "1000",
@@ -281,9 +405,374 @@
       "blocked": false,
       "status": "active",
       "isAdmin": true
+    },
+    {
+      "id": "f629",
+      "name": "muneesa",
+      "email": "muneesa@gmail.com",
+      "password": "zxcvbnm",
+      "isAdmin": false,
+      "blocked": false
+    },
+    {
+      "id": "1764624620465",
+      "name": "hello",
+      "email": "hello@gmail.com",
+      "password": "entanu",
+      "isAdmin": false,
+      "blocked": false
+    },
+    {
+      "id": "1764624681555",
+      "name": "isha",
+      "email": "isha@gmail.com",
+      "password": "ishamol",
+      "isAdmin": false,
+      "blocked": false
+    },
+    {
+      "id": "1764689376117",
+      "name": "haleema",
+      "email": "haleema@gmail.com",
+      "password": "qwertyuiop",
+      "isAdmin": false,
+      "blocked": false
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "d819",
+      "items": [
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "quantity": 2
+        }
+      ],
+      "total": 3200,
+      "address": "sulthana, zaitoon international campus, kerala - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "11/30/2025, 9:00:25 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "76f4",
+      "items": [
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "quantity": 2
+        }
+      ],
+      "total": 3200,
+      "address": "aleema, zaitoon international campus, kannur - 670307",
+      "phone": "+911234567890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 8:05:52 AM",
+      "status": "In Transit"
+    },
+    {
+      "id": "3cd4",
+      "items": [
+        {
+          "id": "6",
+          "name": "Kids Pink Knitted Bodycon Dress",
+          "category": "Kids",
+          "price": 999,
+          "image": "https://www.westside.com/cdn/shop/files/Westside-HOP-Girls-301026280001-Enhanced-1.jpg?v=1762853269&width=1946",
+          "description": "A comfortable Kids Pink Knitted Bodycon Dress designed with a soft stretch knit fabric for a secure and easy fit.",
+          "stock": "5",
+          "quantity": 1
+        }
+      ],
+      "total": 999,
+      "address": "sulthana, zaitoon international campus, kerala - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 8:18:46 AM",
+      "status": "In Transit"
+    },
+    {
+      "id": "f1e5",
+      "items": [
+        {
+          "id": "12",
+          "name": "white cotton regular shirt",
+          "category": "Women",
+          "price": 2189,
+          "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
+          "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style.",
+          "stock": "30",
+          "quantity": 1
+        }
+      ],
+      "total": 2189,
+      "address": "aleema, zaitoon international campus, kannur - 670307",
+      "phone": "+911234567890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 8:19:03 AM",
+      "status": "In Transit"
+    },
+    {
+      "id": "8e93",
+      "items": [
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "stock": "10",
+          "quantity": 1
+        }
+      ],
+      "total": 1600,
+      "address": "sulthana, zaitoon international campus, kerala - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 1:19:59 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "d15a",
+      "items": [
+        {
+          "id": "3",
+          "name": "women solid long sleeve faux fur jacket",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://img0.junaroad.com/uiproducts/22086224/zoom_0-1758026303.jpg",
+          "description": "Step into effortless elegance with this beautifully crafted Printed Polyester Square Neck Dress. Made from lightweight, durable polyester, this dress offers a smooth, comfortable feel that keeps you looking stylish all day long.",
+          "stock": "5",
+          "quantity": 1
+        }
+      ],
+      "total": 1600,
+      "address": "muneesa, muneesa@gmail.com, kerala - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 1:20:18 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "20fa",
+      "items": [
+        {
+          "id": "12",
+          "name": "white cotton regular shirt",
+          "category": "Women",
+          "price": 2189,
+          "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
+          "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style.",
+          "stock": "30",
+          "quantity": 1
+        }
+      ],
+      "total": 2189,
+      "address": "sulthana, zaitoon international campus, kerala - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 1:20:33 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "28d3",
+      "items": [
+        {
+          "id": "16",
+          "name": "shirt collar printed bottom set",
+          "category": "Women",
+          "price": 1159,
+          "image": "https://img1.junaroad.com/uiproducts/18720841/zoom_1-1669782339.jpg",
+          "description": "A stylish Shirt Collar Printed Bottom Set featuring a smart collared top paired with trendy printed bottoms for a chic everyday look.",
+          "stock": "15",
+          "quantity": 1
+        }
+      ],
+      "total": 1159,
+      "address": "muneesa, zaitoon international campus, kannur - 670307",
+      "phone": "+912345677890",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 1:30:42 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "a145",
+      "items": [
+        {
+          "id": "3",
+          "name": "women solid long sleeve faux fur jacket",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://img0.junaroad.com/uiproducts/22086224/zoom_0-1758026303.jpg",
+          "description": "Step into effortless elegance with this beautifully crafted Printed Polyester Square Neck Dress. Made from lightweight, durable polyester, this dress offers a smooth, comfortable feel that keeps you looking stylish all day long.",
+          "stock": "5",
+          "quantity": 1
+        }
+      ],
+      "total": 1600,
+      "address": "isha, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 1:32:04 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "d961",
+      "items": [
+        {
+          "id": "5",
+          "name": "Floral Cotton Round Neck Womens Kurta Pant Set",
+          "category": "Women",
+          "price": 2000,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/SS23GH2823PCAM/SS23GH2823PCAM_BLUE/SS23GH2823PCAM_BLUE.jpg_2000Wx3000H",
+          "description": "A graceful Floral Cotton Round Neck Women’s Kurta Pant Set crafted for everyday comfort and elegant style. Soft cotton fabric with beautiful floral prints makes it perfect for casual and festive wear.",
+          "stock": "54",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "women solid long sleeve faux fur jacket",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://img0.junaroad.com/uiproducts/22086224/zoom_0-1758026303.jpg",
+          "description": "Step into effortless elegance with this beautifully crafted Printed Polyester Square Neck Dress. Made from lightweight, durable polyester, this dress offers a smooth, comfortable feel that keeps you looking stylish all day long.",
+          "stock": "5",
+          "quantity": 1
+        }
+      ],
+      "total": 3600,
+      "address": "isha, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 6:36:46 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "5eb7",
+      "items": [
+        {
+          "id": "7",
+          "name": "black cotton blend coord set",
+          "category": "Men",
+          "price": 2000,
+          "image": "https://img1.junaroad.com/uiproducts/21143649/zoom_1-1713865706.jpg",
+          "description": "A stylish Black Cotton Blend Coord Set designed for effortless comfort and modern everyday style.",
+          "stock": "15",
+          "quantity": 2
+        }
+      ],
+      "total": 4000,
+      "address": "isha, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 8:23:12 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "313e",
+      "items": [
+        {
+          "id": "12",
+          "name": "white cotton regular shirt",
+          "category": "Women",
+          "price": 2189,
+          "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
+          "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style.",
+          "stock": "30",
+          "quantity": 2
+        },
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "stock": "10",
+          "quantity": 1
+        }
+      ],
+      "total": 5978,
+      "address": "isha, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/1/2025, 8:54:59 PM",
+      "status": "In Transit"
+    },
+    {
+      "id": "9f86",
+      "items": [
+        {
+          "id": "12",
+          "name": "white cotton regular shirt",
+          "category": "Women",
+          "price": 2189,
+          "image": "https://img0.junaroad.com/uiproducts/18052523/zoom_0-1636543477.jpg",
+          "description": "A classic White Cotton Regular Shirt crafted for everyday comfort and timeless style.",
+          "stock": "30",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "stock": "10",
+          "quantity": 7
+        },
+        {
+          "id": "8",
+          "name": "black cotton blend coord set",
+          "category": "Women",
+          "price": 2000,
+          "image": "https://img0.junaroad.com/uiproducts/19117950/zoom_0-1687938205.jpg",
+          "description": "Upgrade your wardrobe with this chic Black Cotton Blend Coord Set. ",
+          "stock": "55",
+          "quantity": 1
+        }
+      ],
+      "total": 15389,
+      "address": "isha, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/2/2025, 7:27:38 AM",
+      "status": "In Transit"
+    },
+    {
+      "id": "c74b",
+      "items": [
+        {
+          "id": "4",
+          "name": "Printed Polyester Square Neck Women's Dress",
+          "category": "Women",
+          "price": 1600,
+          "image": "https://images-magento.shoppersstop.com/pub/media/catalog/product/A25LQD11462/A25LQD11462_BLUE/A25LQD11462_BLUE.jpg",
+          "description": "A stylish Printed Polyester Square Neck Women’s Dress designed with a modern neckline and vibrant all-over prints. Lightweight, comfortable, and perfect for both casual outings and special occasions.",
+          "stock": "10",
+          "quantity": 1
+        }
+      ],
+      "total": 1600,
+      "address": "shamna, thayineri ,payyannur, kannur - 670307",
+      "phone": "6754839485",
+      "payment": "Cash on Delivery",
+      "date": "12/2/2025, 3:50:30 PM",
+      "status": "In Transit"
+    }
+  ],
   "cart": [],
   "wishlist": []
 }

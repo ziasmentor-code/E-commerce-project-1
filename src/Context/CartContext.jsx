@@ -131,7 +131,7 @@
 import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
-const API = "http://localhost:5009/cart";
+const API = "http://localhost:5007/cart";
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
